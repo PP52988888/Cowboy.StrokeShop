@@ -1,0 +1,32 @@
+﻿@using Cowboy.Stroke.AspNetCore.Views.WeChat
+
+@model WeChatPayParameter
+<div>
+
+</div>
+<script>
+    // 当微信内置浏览器完成内部初始化后会触发WeixinJSBridgeReady事件。
+    document.title = '正在启动微信支付,请稍等..';
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        //公众号支付
+        WeixinJSBridge.invoke('getBrandWCPayRequest', {
+            "appId": "@Model.AppId", //公众号名称，由商户传入
+            "timeStamp": "@Model.TimeStamp", //时间戳
+            "nonceStr": "@Model.NonceStr", //随机串
+            "package": "@Model.Package",//扩展包
+            "signType": "MD5",//微信签名方式:MD5
+            "paySign": "@Model.PaySign"//微信签名
+        }, function (res) {
+            if (res.err_msg == "get_brand_wcpay_request:ok") {
+                location.replace("@Model.SuccessUrl")
+                //成功后跳转的页面地址
+            }
+            else {
+                location.replace("@Model.FailedUrl");
+                //失败后跳转的页面地址
+            }
+            // 使用以上方式判断前端返回,微信团队郑重提示：res.err_msg将在用户支付成功后返回ok，但并不保证它绝对可靠。
+            //因此微信团队建议，当收到ok返回时，向商户后台询问是否收到交易成功的通知，若收到通知，前端展示交易成功的界面；若此时未收到通知，商户后台主动调用查询订单接口，查询订单的当前状态，并反馈给前端展示相应的界面。
+        });
+    }, false);
+</script>

@@ -1,0 +1,4400 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cowboy.Stroke.AspNetCore</name>
+    </assembly>
+    <members>
+        <member name="T:Cowboy.Stroke.AspNetCore.ApiControllers.Filters.ApiExceptionFilterAttribute">
+            <summary>
+            Class ApiExceptionFilterAttribute.
+            </summary>
+            <seealso cref="T:Microsoft.AspNetCore.Mvc.Filters.ExceptionFilterAttribute" />
+        </member>
+        <member name="M:Cowboy.Stroke.AspNetCore.ApiControllers.Filters.ApiExceptionFilterAttribute.OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <summary>
+            Called when [exception].
+            </summary>
+            <param name="context">The context.</param>
+            <inheritdoc />
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.ApiControllers.Filters.GetClaimParameter">
+            <summary>
+            Class GetClaimParameter.
+            </summary>
+        </member>
+        <member name="M:Cowboy.Stroke.AspNetCore.ApiControllers.Filters.GetClaimParameter.UserId(Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            用户编号
+            </summary>
+            <param name="contextAccessor"></param>
+            <returns>System.Int64.</returns>
+            <exception cref="T:System.Exception">
+            转换失败
+            or
+            获取Token失败
+            </exception>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.ApiControllers.Filters.IdentityClaimTypes">
+            <summary>
+            Class IdentityClaimTypes. This class cannot be inherited.
+            </summary>
+        </member>
+        <member name="F:Cowboy.Stroke.AspNetCore.ApiControllers.Filters.IdentityClaimTypes.UserId">
+            <summary>
+            用户编号声明
+            </summary>
+        </member>
+        <member name="F:Cowboy.Stroke.AspNetCore.ApiControllers.Filters.IdentityClaimTypes.UserName">
+            <summary>
+            用户名称声明
+            <para><see cref="F:System.Security.Claims.ClaimTypes.Surname" />的快捷方法</para>
+            </summary>
+        </member>
+        <member name="F:Cowboy.Stroke.AspNetCore.ApiControllers.Filters.IdentityClaimTypes.Role">
+            <summary>
+            用户角色声明
+            <para><see cref="F:System.Security.Claims.ClaimTypes.Role" />的快捷方式</para>
+            </summary>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.ApiControllers.Filters.JwtAuthorizeAttribute">
+            <summary>
+            Jwt授权过滤器
+            </summary>
+            <seealso cref="T:Microsoft.AspNetCore.Authorization.AuthorizeAttribute" />
+        </member>
+        <member name="M:Cowboy.Stroke.AspNetCore.ApiControllers.Filters.JwtAuthorizeAttribute.#ctor">
+            <summary>
+            初始化一个新的<see cref="T:Cowboy.Stroke.AspNetCore.ApiControllers.Filters.JwtAuthorizeAttribute" />实例
+            </summary>
+        </member>
+        <member name="M:Cowboy.Stroke.AspNetCore.ApiControllers.Filters.JwtAuthorizeAttribute.#ctor(System.Object)">
+            <summary>
+            初始化一个新的<see cref="T:Cowboy.Stroke.AspNetCore.ApiControllers.Filters.JwtAuthorizeAttribute" />实例
+            </summary>
+            <param name="role">The role.</param>
+        </member>
+        <member name="M:Cowboy.Stroke.AspNetCore.ApiControllers.Filters.JwtAuthorizeAttribute.#ctor(System.Object,System.Object)">
+            <summary>
+            初始化一个新的<see cref="T:Cowboy.Stroke.AspNetCore.ApiControllers.Filters.JwtAuthorizeAttribute" />实例
+            </summary>
+            <param name="role1">The role1.</param>
+            <param name="role2">The role2.</param>
+        </member>
+        <member name="M:Cowboy.Stroke.AspNetCore.ApiControllers.Filters.JwtAuthorizeAttribute.#ctor(System.Object,System.Object,System.Object)">
+            <summary>
+            初始化一个新的<see cref="T:Cowboy.Stroke.AspNetCore.ApiControllers.Filters.JwtAuthorizeAttribute" />实例
+            </summary>
+            <param name="role1">The role1.</param>
+            <param name="role2">The role2.</param>
+            <param name="role3">The role3.</param>
+        </member>
+        <member name="M:Cowboy.Stroke.AspNetCore.ApiControllers.Filters.JwtAuthorizeAttribute.#ctor(System.Object[])">
+            <summary>
+            初始化一个新的<see cref="T:Cowboy.Stroke.AspNetCore.ApiControllers.Filters.JwtAuthorizeAttribute" />实例
+            </summary>
+            <param name="roles">The roles.</param>
+        </member>
+        <member name="M:Cowboy.Stroke.AspNetCore.ApiControllers.Filters.JwtAuthorizeAttribute.#ctor(System.String)">
+            <summary>
+            初始化一个新的<see cref="T:Cowboy.Stroke.AspNetCore.ApiControllers.Filters.JwtAuthorizeAttribute" />实例
+            </summary>
+            <param name="role">The role.</param>
+        </member>
+        <member name="M:Cowboy.Stroke.AspNetCore.ApiControllers.Filters.JwtAuthorizeAttribute.#ctor(System.String,System.String)">
+            <summary>
+            初始化一个新的<see cref="T:Cowboy.Stroke.AspNetCore.ApiControllers.Filters.JwtAuthorizeAttribute" />实例
+            </summary>
+            <param name="role1">The role1.</param>
+            <param name="role2">The role2.</param>
+        </member>
+        <member name="M:Cowboy.Stroke.AspNetCore.ApiControllers.Filters.JwtAuthorizeAttribute.#ctor(System.String,System.String,System.String)">
+            <summary>
+            初始化一个新的<see cref="T:Cowboy.Stroke.AspNetCore.ApiControllers.Filters.JwtAuthorizeAttribute" />实例
+            </summary>
+            <param name="role1">The role1.</param>
+            <param name="role2">The role2.</param>
+            <param name="role3">The role3.</param>
+        </member>
+        <member name="M:Cowboy.Stroke.AspNetCore.ApiControllers.Filters.JwtAuthorizeAttribute.#ctor(System.String[])">
+            <summary>
+            初始化一个新的<see cref="T:Cowboy.Stroke.AspNetCore.ApiControllers.Filters.JwtAuthorizeAttribute" />实例
+            </summary>
+            <param name="roles">The roles.</param>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.ApiControllers.Filters.SwaggerOperationFilter">
+            <summary>
+            Class SwaggerOperationFilter.
+            </summary>
+            <seealso cref="T:Swashbuckle.AspNetCore.SwaggerGen.IOperationFilter" />
+        </member>
+        <member name="M:Cowboy.Stroke.AspNetCore.ApiControllers.Filters.SwaggerOperationFilter.Apply(Swashbuckle.AspNetCore.Swagger.Operation,Swashbuckle.AspNetCore.SwaggerGen.OperationFilterContext)">
+            <summary>
+            Applies the specified operation.
+            </summary>
+            <param name="operation">The operation.</param>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.ApiControllers.HomeController">
+            <summary>
+            Class HomeController.
+            </summary>
+            <seealso cref="T:Microsoft.AspNetCore.Mvc.Controller" />
+        </member>
+        <member name="F:Cowboy.Stroke.AspNetCore.ApiControllers.HomeController.weChatOptions">
+            <summary>
+            The we chat options
+            </summary>
+        </member>
+        <member name="F:Cowboy.Stroke.AspNetCore.ApiControllers.HomeController.jwtOptions">
+            <summary>
+            The JWT options
+            </summary>
+        </member>
+        <member name="F:Cowboy.Stroke.AspNetCore.ApiControllers.HomeController.logger">
+            <summary>
+            The logger
+            </summary>
+        </member>
+        <member name="F:Cowboy.Stroke.AspNetCore.ApiControllers.HomeController.strokeContext">
+            <summary>
+            The stroke context
+            </summary>
+        </member>
+        <member name="M:Cowboy.Stroke.AspNetCore.ApiControllers.HomeController.#ctor(Microsoft.Extensions.Options.IOptions{Cowboy.Stroke.AspNetCore.Model.WeChatOptions},Microsoft.Extensions.Options.IOptions{Cowboy.Stroke.AspNetCore.Model.JwtOptions},Microsoft.Extensions.Logging.ILogger{Cowboy.Stroke.AspNetCore.ApiControllers.HomeController},Cowboy.TravelShop.Model.StrokeContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cowboy.Stroke.AspNetCore.ApiControllers.HomeController" /> class.
+            </summary>
+            <param name="weChatOptions">The we chat options.</param>
+            <param name="jwtOptions">The JWT options.</param>
+            <param name="logger">The logger.</param>
+            <param name="strokeContext">The stroke context.</param>
+        </member>
+        <member name="M:Cowboy.Stroke.AspNetCore.ApiControllers.HomeController.Login(System.String,System.String)">
+            <summary>
+            微信登陆
+            </summary>
+            <param name="code">The code.</param>
+            <param name="shareCode">The share code.</param>
+            <returns>ActionResult.</returns>
+            <exception cref="T:System.Exception">
+            微信授权登陆失败!
+            or
+            微信登陆授权失败
+            </exception>
+        </member>
+        <member name="M:Cowboy.Stroke.AspNetCore.ApiControllers.HomeController.CreateToken(System.String,System.Int64)">
+            <summary>
+            创建token
+            </summary>
+            <param name="userName">Name of the user.</param>
+            <param name="userId">The user identifier.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.ApiControllers.PaymentController">
+            <summary>
+            支付回调
+            </summary>
+            <seealso cref="T:Cowboy.Stoke.AspNetCore.Controllers.ApiController" />
+        </member>
+        <member name="F:Cowboy.Stroke.AspNetCore.ApiControllers.PaymentController.paymentService">
+            <summary>
+            The payment service
+            </summary>
+        </member>
+        <member name="M:Cowboy.Stroke.AspNetCore.ApiControllers.PaymentController.#ctor(Cowboy.Stroke.AspNetCore.IService.IPaymentService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cowboy.Stroke.AspNetCore.ApiControllers.PaymentController"/> class.
+            </summary>
+            <param name="paymentService">The payment service.</param>
+        </member>
+        <member name="M:Cowboy.Stroke.AspNetCore.ApiControllers.PaymentController.WeChatPayNotify">
+            <summary>
+            微信支付回调
+            </summary>
+            <returns>Task&lt;Response&gt;.</returns>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.ApiControllers.WeChatController">
+            <summary>
+            Class WeChatController.
+            </summary>
+            <seealso cref="T:Cowboy.Stoke.AspNetCore.Controllers.ApiController" />
+        </member>
+        <member name="F:Cowboy.Stroke.AspNetCore.ApiControllers.WeChatController.logger">
+            <summary>
+            The logger
+            </summary>
+        </member>
+        <member name="F:Cowboy.Stroke.AspNetCore.ApiControllers.WeChatController.memoryCache">
+            <summary>
+            The memory cache
+            </summary>
+        </member>
+        <member name="F:Cowboy.Stroke.AspNetCore.ApiControllers.WeChatController.weChatOptions">
+            <summary>
+            The we chat options
+            </summary>
+        </member>
+        <member name="M:Cowboy.Stroke.AspNetCore.ApiControllers.WeChatController.#ctor(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Caching.Memory.IMemoryCache,Cowboy.Stroke.AspNetCore.Model.WeChatOptions)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cowboy.Stroke.AspNetCore.ApiControllers.WeChatController"/> class.
+            </summary>
+            <param name="logger">The logger.</param>
+            <param name="memoryCache">The memory cache.</param>
+            <param name="weChatOptions">The we chat options.</param>
+        </member>
+        <member name="M:Cowboy.Stroke.AspNetCore.ApiControllers.WeChatController.JsPay(System.String,System.String)">
+            <summary>
+            微信JsPay支付
+            </summary>
+            <param name="code">The code.</param>
+            <param name="state">The state.</param>
+            <returns>ActionResult.</returns>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Caching.CachedIdentifyingCode">
+            <summary>
+            Class CachedIdentifyingCode.
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Caching.CachedIdentifyingCode.Code">
+            <summary>
+            Gets or sets the code.
+            </summary>
+            <value>The code.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Caching.CachedIdentifyingCode.LastTime">
+            <summary>
+            Gets or sets the last time.
+            </summary>
+            <value>The last time.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Common.BusinessException">
+            <summary>
+            Class BusinessException.
+            </summary>
+            <seealso cref="T:System.Exception" />
+        </member>
+        <member name="M:Cowboy.Stroke.AspNetCore.Common.BusinessException.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cowboy.Stroke.AspNetCore.Common.BusinessException"/> class.
+            </summary>
+            <param name="code">The code.</param>
+        </member>
+        <member name="M:Cowboy.Stroke.AspNetCore.Common.BusinessException.#ctor(System.String,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cowboy.Stroke.AspNetCore.Common.BusinessException"/> class.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="code">The code.</param>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Common.BusinessException.Code">
+            <summary>
+            Gets the code.
+            </summary>
+            <value>The code.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.IService.Implement.PaymentService">
+            <summary>
+            Class PaymentService.
+            </summary>
+            <seealso cref="T:Cowboy.Stroke.AspNetCore.IService.IPaymentService" />
+        </member>
+        <member name="F:Cowboy.Stroke.AspNetCore.IService.Implement.PaymentService.stokeContext">
+            <summary>
+            The stoke context
+            </summary>
+        </member>
+        <member name="F:Cowboy.Stroke.AspNetCore.IService.Implement.PaymentService.logger">
+            <summary>
+            The logger
+            </summary>
+        </member>
+        <member name="F:Cowboy.Stroke.AspNetCore.IService.Implement.PaymentService.weChatOptions">
+            <summary>
+            The we chat options
+            </summary>
+        </member>
+        <member name="F:Cowboy.Stroke.AspNetCore.IService.Implement.PaymentService.httpContextAccessor">
+            <summary>
+            The HTTP context accessor
+            </summary>
+        </member>
+        <member name="M:Cowboy.Stroke.AspNetCore.IService.Implement.PaymentService.#ctor(Cowboy.TravelShop.Model.StrokeContext,Microsoft.Extensions.Logging.ILogger,Cowboy.Stroke.AspNetCore.Model.WeChatOptions,Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cowboy.Stroke.AspNetCore.IService.Implement.PaymentService"/> class.
+            </summary>
+            <param name="stokeContext">The stoke context.</param>
+            <param name="logger">The logger.</param>
+            <param name="weChatOptions">The we chat options.</param>
+            <param name="httpContextAccessor">The HTTP context accessor.</param>
+        </member>
+        <member name="M:Cowboy.Stroke.AspNetCore.IService.Implement.PaymentService.WeChatPayNotify">
+            <summary>
+            微信支付回调
+            </summary>
+            <returns>Task&lt;Response&gt;.</returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="F:Cowboy.Stroke.AspNetCore.IService.Implement.SMSService.strokeContext">
+            <summary>
+            行程数据上下文
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.IService.Implement.SMSService.Logger">
+            <summary>
+             日志
+            </summary>
+            <value>The logger.</value>
+        </member>
+        <member name="F:Cowboy.Stroke.AspNetCore.IService.Implement.SMSService.memory">
+            <summary>
+            The memory
+            </summary>
+        </member>
+        <member name="M:Cowboy.Stroke.AspNetCore.IService.Implement.SMSService.#ctor(Cowboy.TravelShop.Model.StrokeContext,Microsoft.Extensions.Logging.ILogger{Cowboy.Stroke.AspNetCore.IService.Implement.SMSService},Microsoft.Extensions.Options.IOptions{Cowboy.Stroke.AspNetCore.Options.SMSOptions},Microsoft.AspNetCore.Http.IHttpContextAccessor,Microsoft.Extensions.Caching.Memory.IMemoryCache)">
+            <summary>
+            </summary>
+            <param name="strokeContext">The stroke context.</param>
+            <param name="logger"></param>
+            <param name="options"></param>
+            <param name="contextAccessor"></param>
+            <param name="memory"></param>
+        </member>
+        <member name="M:Cowboy.Stroke.AspNetCore.IService.Implement.SMSService.SendIdentifyingCodeAsync(System.String,System.String)">
+            <summary>
+            发送验证码
+            </summary>
+            <param name="phone">The phone.</param>
+            <param name="prefix">The prefix.</param>
+            <returns>Task&lt;Response&lt;System.Boolean&gt;&gt;.</returns>
+            <exception cref="T:System.Exception">规定时间内不能重复获取验证码</exception>
+        </member>
+        <member name="M:Cowboy.Stroke.AspNetCore.IService.Implement.SMSService._SendMessage2Phone(System.String,System.String,System.String)">
+            <summary>
+            发送短信
+            </summary>
+            <param name="phone">The phone.</param>
+            <param name="message">The message.</param>
+            <param name="code">The code.</param>
+            <returns>Task&lt;System.Boolean&gt;.</returns>
+        </member>
+        <member name="M:Cowboy.Stroke.AspNetCore.IService.Implement.SMSService.ValidateIdentifyingCodeAsync(System.String,System.String,System.String)">
+            <summary>
+            验证验证码是否正确
+            </summary>
+            <param name="phone">The phone.</param>
+            <param name="code">The code.</param>
+            <param name="prefix">The prefix.</param>
+            <returns>Task&lt;Response&lt;System.Boolean&gt;&gt;.</returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.IService.IPaymentService">
+            <summary>
+            Interface IPaymentService
+            </summary>
+        </member>
+        <member name="M:Cowboy.Stroke.AspNetCore.IService.IPaymentService.WeChatPayNotify">
+            <summary>
+            微信支付回调
+            </summary>
+            <returns>Task&lt;Response&gt;.</returns>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.IService.ISMSService">
+            <summary>
+            Interface ISMSService
+            </summary>
+        </member>
+        <member name="M:Cowboy.Stroke.AspNetCore.IService.ISMSService.SendIdentifyingCodeAsync(System.String,System.String)">
+            <summary>
+            发送验证码
+            </summary>
+            <param name="phone">The phone.</param>
+            <param name="prefix">The prefix.</param>
+            <returns>Task&lt;Response&lt;System.Boolean&gt;&gt;.</returns>
+        </member>
+        <member name="M:Cowboy.Stroke.AspNetCore.IService.ISMSService.ValidateIdentifyingCodeAsync(System.String,System.String,System.String)">
+            <summary>
+            验证验证码是否正确
+            </summary>
+            <param name="phone">The phone.</param>
+            <param name="code">The code.</param>
+            <param name="prefix">The prefix.</param>
+            <returns>Task&lt;Response&lt;System.Boolean&gt;&gt;.</returns>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Model.Dtos.AddCustomizeRequest">
+            <summary>
+            添加行程定制请求
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.AddCustomizeRequest.StratCity">
+            <summary>
+            出发城市
+            </summary>
+            <value>The strat city.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.AddCustomizeRequest.Destination">
+            <summary>
+            目的地 
+            </summary>
+            <value>The destination.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.AddCustomizeRequest.Cphone">
+            <summary>
+            手机号
+            </summary>
+            <value>The cphone.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.AddCustomizeRequest.Name">
+            <summary>
+            预定人
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.AddCustomizeRequest.Adult">
+            <summary>
+            成人人数
+            </summary>
+            <value>The adult.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.AddCustomizeRequest.Children">
+            <summary>
+            儿童人数
+            </summary>
+            <value>The children.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.AddCustomizeRequest.Budget">
+            <summary>
+             人均预算
+            </summary>
+            <value>The budget.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.AddCustomizeRequest.NumberDay">
+            <summary>
+            游玩天数
+            </summary>
+            <value>The number day.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.AddCustomizeRequest.Remark">
+             <summary>
+            备注
+             </summary>
+             <value>The remark.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.AddCustomizeRequest.StartDate">
+            <summary>
+            开始日期
+            </summary>
+            <value>The start date.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Model.Dtos.AddCustomizeResponse">
+            <summary>
+            添加私人定制行程
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.AddCustomizeResponse.Id">
+            <summary>
+            编号
+            </summary>
+            <value>The identifier.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.AddCustomizeResponse.CustomizeNo">
+            <summary>
+            定制行程订单号
+            </summary>
+            <value>The customize no.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Model.Dtos.AddtoShoppingCartRequest">
+            <summary>
+            行程添加到购物车
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.AddtoShoppingCartRequest.ShoppingCartId">
+            <summary>
+            购物车编号
+            </summary>
+            <value>The shopping cart identifier.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.AddtoShoppingCartRequest.StrokeId">
+            <summary>
+            行程编号
+            </summary>
+            <value>The stoke identifier.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.AddtoShoppingCartRequest.Quantity">
+            <summary>
+            添加数量
+            </summary>
+            <value>The quantity.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.AddtoShoppingCartRequest.Remark">
+            <summary>
+            备注信息
+            </summary>
+            <value>The remark.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Model.Dtos.CancelCustomizeRequest">
+            <summary>
+            取消私人定制订单请求
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.CancelCustomizeRequest.CustomizeId">
+            <summary>
+            私人定制编号
+            </summary>
+            <value>The customize identifier.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Model.Dtos.CollectStrokeRequest">
+            <summary>
+             收藏行程请求数据
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.CollectStrokeRequest.StrokeId">
+            <summary>
+            行程编号
+            </summary>
+            <value>The stoke identifier.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.CollectStrokeRequest.CollectId">
+            <summary>
+            收藏编号
+            </summary>
+            <value>The collect identifier.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Model.Dtos.CompleteCustomizeRequest">
+            <summary>
+            Class CompleteCustomizeRequest.
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.CompleteCustomizeRequest.CustomizeId">
+            <summary>
+            定制行程编号
+            </summary>
+            <value>The customize identifier.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Model.Dtos.CustiomizePayRequest">
+            <summary>
+            Class CustiomizePayRequest.
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.CustiomizePayRequest.CustomizesId">
+            <summary>
+            定制行程编号
+            </summary>
+            <value>The customizes identifier.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.CustiomizePayRequest.SuccessUrl">
+            <summary>
+            成功返回地址
+            </summary>
+            <value>The success URL.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.CustiomizePayRequest.FaildUrl">
+            <summary>
+            失败返回地址
+            </summary>
+            <value>The faild URL.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Model.Dtos.DeleteShoppingCartRequest">
+            <summary>
+            删除购物车
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.DeleteShoppingCartRequest.ShoppingCartId">
+            <summary>
+            删除购物车
+            </summary>
+            <value>The shopping cart identifier.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Model.Dtos.GetBannerRequest">
+            <summary>
+            获取Banner广告数据
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetBannerRequest.CityId">
+            <summary>
+            城市编号
+            </summary>
+            <value>The city identifier.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Model.Dtos.GetBannerResponse">
+            <summary>
+            获取首页banner数据
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetBannerResponse.Id">
+            <summary>
+            编号
+            </summary>
+            <value>The identifier.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetBannerResponse.Title">
+            <summary>
+            标题 
+            </summary>
+            <value>The title.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetBannerResponse.StrokeId">
+            <summary>
+            行程编号 
+            </summary>
+            <value>The stroke identifier.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetBannerResponse.Type">
+            <summary>
+            广告类型
+            </summary>
+            <value>The type.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetBannerResponse.Link">
+            <summary>
+            链接
+            </summary>
+            <value>The link.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetBannerResponse.CityId">
+            <summary>
+            城市编号
+            </summary>
+            <value>The city identifier.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetBannerResponse.Content">
+            <summary>
+            Banner内容简介
+            </summary>
+            <value>The content.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetBannerResponse.ImageUrl">
+            <summary>
+            图片地址
+            </summary>
+            <value>The image URL.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetBannerResponse.ImageThumb">
+            <summary>
+            图片缩略图
+            </summary>
+            <value>The image thumb.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Model.Dtos.GetCityRequest">
+            <summary>
+            获取城市信息请求
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetCityRequest.IsHot">
+            <summary>
+            是否为热门城市
+            </summary>
+            <value><c>null</c> if [is hot] contains no value, <c>true</c> if [is hot]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetCityRequest.SearchKey">
+            <summary>
+            搜索关键词
+            </summary>
+            <value>The search key.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Model.Dtos.GetCityResponse">
+            <summary>
+            获取城市信息数据
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetCityResponse.Id">
+            <summary>
+            编号
+            </summary>
+            <value>The identifier.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetCityResponse.IsOpen">
+            <summary>
+            是否开放 
+            </summary>
+            <value><c>true</c> if this instance is open; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetCityResponse.IsHot">
+            <summary>
+            是否热门
+            </summary>
+            <value><c>true</c> if this instance is hot; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetCityResponse.Name">
+            <summary>
+            城市名称
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Model.Dtos.GetCollectStrokeResponse">
+            <summary>
+            获取用户所有的收藏行程信息
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetCollectStrokeResponse.Id">
+            <summary>
+             收藏编号
+            </summary>
+            <value>The identifier.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetCollectStrokeResponse.UserId">
+            <summary>
+            用户编号
+            </summary>
+            <value>The user identifier.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetCollectStrokeResponse.Title">
+            <summary>
+            标题
+            </summary>
+            <value>The title.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetCollectStrokeResponse.ImageUrl">
+            <summary>
+            封面地址
+            </summary>
+            <value>The image URL.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetCollectStrokeResponse.ImageThumb">
+            <summary>
+            封面缩略图
+            </summary>
+            <value>The image thumb.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetCollectStrokeResponse.StrokeId">
+            <summary>
+            行程编号
+            </summary>
+            <value>The stoke identifier.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Model.Dtos.GetCustomizeRequest">
+            <summary>
+            获取全部的定制信息
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetCustomizeRequest.Status">
+            <summary>
+            定制状态
+            </summary>
+            <value>The status.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Model.Dtos.GetCustomizeResponse">
+            <summary>
+            获取全部的定制信息
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetCustomizeResponse.Id">
+            <summary>
+            定制行程编号
+            </summary>
+            <value>The identifier.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetCustomizeResponse.UserId">
+            <summary>
+            用户编号
+            </summary>
+            <value>The user identifier.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetCustomizeResponse.StartCity">
+            <summary>
+            开始城市
+            </summary>
+            <value>The start city.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetCustomizeResponse.Destination">
+            <summary>
+            目的地
+            </summary>
+            <value>The destination.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetCustomizeResponse.Cphone">
+            <summary>
+            手机号
+            </summary>
+            <value>The cphone.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetCustomizeResponse.Status">
+            <summary>
+            定制状态
+            </summary>
+            <value>The status.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetCustomizeResponse.CustomizeNo">
+            <summary>
+            定制行程订单号
+            </summary>
+            <value>The customize no.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetCustomizeResponse.Adult">
+            <summary>
+            成人人数
+            </summary>
+            <value>The adult.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetCustomizeResponse.Children">
+            <summary>
+            儿童人数
+            </summary>
+            <value>The children.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetCustomizeResponse.Name">
+            <summary>
+            预约人
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetCustomizeResponse.Budget">
+            <summary>
+            人均预算
+            </summary>
+            <value>The budget.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetCustomizeResponse.NumberDay">
+            <summary>
+            游玩天数
+            </summary>
+            <value>The number day.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetCustomizeResponse.StartDate">
+            <summary>
+            开始日期
+            </summary>
+            <value>The start date.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetCustomizeResponse.Remark">
+            <summary>
+            备注信息 
+            </summary>
+            <value>The remark.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Model.Dtos.GetOrderingResponse">
+            <summary>
+            获取订单信息
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetOrderingResponse.Id">
+            <summary>
+             订单编号
+            </summary>
+            <value>The identifier.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetOrderingResponse.OrderNo">
+            <summary>
+            订单号
+            </summary>
+            <value>The order no.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetOrderingResponse.StrokeId">
+            <summary>
+            行程编号
+            </summary>
+            <value>The stoke identifier.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetOrderingResponse.Title">
+            <summary>
+            标题
+            </summary>
+            <value>The title.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetOrderingResponse.OrderStatus">
+            <summary>
+            订单状态
+            </summary>
+            <value>The order status.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetOrderingResponse.Price">
+            <summary>
+            价格
+            </summary>
+            <value>The price.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetOrderingResponse.Remark">
+            <summary>
+            备注 
+            </summary>
+            <value>The remark.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetOrderingResponse.ImageUrl">
+            <summary>
+            封面地址
+            </summary>
+            <value>The image URL.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetOrderingResponse.ImageThumb">
+            <summary>
+            封面缩略图地址
+            </summary>
+            <value>The image thumb.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Model.Dtos.GetRecommendStrokeRequest">
+            <summary>
+            Class GetRecommendStokeRequest.
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetRecommendStrokeRequest.CurrentCity">
+            <summary>
+            当前城市,true 为当前城市的推荐，false 为全部行程中的推荐
+            </summary>
+            <value>
+              <c>true</c> if [current city]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetRecommendStrokeRequest.CityId">
+            <summary>
+            城市编号
+            </summary>
+            <value>The city identifier.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Model.Dtos.GetShoppingCartInfoResponse">
+            <summary>
+            获取购物车数据信息
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetShoppingCartInfoResponse.Id">
+            <summary>
+            编号
+            </summary>
+            <value>The identifier.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetShoppingCartInfoResponse.UserId">
+            <summary>
+            用户编号
+            </summary>
+            <value>The user identifier.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetShoppingCartInfoResponse.StokeId">
+            <summary>
+            行程编号 
+            </summary>
+            <value>The stoke identifier.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetShoppingCartInfoResponse.Quantity">
+            <summary>
+            数量
+            </summary>
+            <value>The quantity.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetShoppingCartInfoResponse.Remark">
+            <summary>
+            备注
+            </summary>
+            <value>The remark.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetShoppingCartInfoResponse.Title">
+            <summary>
+             标题
+            </summary>
+            <value>The title.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetShoppingCartInfoResponse.ImageUrl">
+            <summary>
+            封面图片地址
+            </summary>
+            <value>The image URL.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetShoppingCartInfoResponse.ImageThumb">
+            <summary>
+            封面图片缩略图
+            </summary>
+            <value>The image thumb.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Model.Dtos.GetStrokeDetailRequest">
+            <summary>
+            Class GetStokeDetailRequest.
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetStrokeDetailRequest.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>The identifier.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Model.Dtos.GetStrokeDetailResponse">
+            <summary>
+            获取行程详情信息
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetStrokeDetailResponse.Id">
+            <summary>
+            编号
+            </summary>
+            <value>The identifier.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetStrokeDetailResponse.Title">
+            <summary>
+             标题
+            </summary>
+            <value>The title.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetStrokeDetailResponse.Detail">
+             <summary>
+             详情
+            </summary>
+             <value>The detail.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetStrokeDetailResponse.ImageUrl">
+            <summary>
+            封面地址
+            </summary>
+            <value>The image URL.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetStrokeDetailResponse.ImageThumb">
+            <summary>
+            封面缩略图
+            </summary>
+            <value>The image thumb.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetStrokeDetailResponse.NumberDay">
+            <summary>
+            游玩天数
+            </summary>
+            <value>The \.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetStrokeDetailResponse.CollectId">
+            <summary>
+            行程收藏编号
+            </summary>
+            <value>The stroke identifier.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetStrokeDetailResponse.IsActive">
+            <summary>
+            行程是否收藏
+            </summary>
+            <value><c>true</c> if this instance is active; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetStrokeDetailResponse.City">
+            <summary>
+             出发城市
+            </summary>
+            <value>The city.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetStrokeDetailResponse.Destination">
+            <summary>
+            目的地
+            </summary>
+            <value>The destination.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetStrokeDetailResponse.Price">
+            <summary>
+            价格 
+            </summary>
+            <value>The price.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetStrokeDetailResponse.SpecialPrice">
+            <summary>
+            优惠价格
+            </summary>
+            <value>The special price.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetStrokeHotRequest.CategoryType">
+            <summary>
+            分类类别 :1 为国际，2：为国内，3：省内
+            </summary>
+            <value>The type of the category.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Model.Dtos.GetStrokeHotResponse">
+            <summary>
+            获取行程
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetStrokeHotResponse.Id">
+            <summary>
+             行程编号
+            </summary>
+            <value>The identifier.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetStrokeHotResponse.Title">
+            <summary>
+            行程标题
+            </summary>
+            <value>The title.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetStrokeHotResponse.City">
+            <summary>
+            城市 
+            </summary>
+            <value>The city.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetStrokeHotResponse.Destination">
+            <summary>
+            目的地
+            </summary>
+            <value>The destination.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetStrokeHotResponse.ImageUrl">
+            <summary>
+            图片地址
+            </summary>
+            <value>The image URL.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetStrokeHotResponse.ImageThumb">
+            <summary>
+            封面地址
+            </summary>
+            <value>The image thumb.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetStrokeHotResponse.Price">
+            <summary>
+            标准价格
+            </summary>
+            <value>The price.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.GetStrokeHotResponse.SpecialPrice">
+            <summary>
+            优惠价格
+            </summary>
+            <value>The special price.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Model.Dtos.OrderPaymentRequest">
+            <summary>
+            待支付订单中的去支付
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.OrderPaymentRequest.OrderId">
+            <summary>
+            订单编号
+            </summary>
+            <value>The order identifier.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.OrderPaymentRequest.Payment">
+            <summary>
+            支付方式
+            </summary>
+            <value>The type of the payment.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.OrderPaymentRequest.PayPassWord">
+             <summary>
+            支付密码 
+             </summary>
+             <value>The pay pass word.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.OrderPaymentRequest.Remark">
+            <summary>
+            备注信息
+            </summary>
+            <value>The remark.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.OrderPaymentRequest.SuccessUrl">
+            <summary>
+            支付成功后的跳转地址
+            </summary>
+            <value>The success URL.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.OrderPaymentRequest.FaildUrl">
+            <summary>
+            支付失败后的跳转地址
+            </summary>
+            <value>The faild URL.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Model.Dtos.PlaceAnOrderInfoResponse">
+            <summary>
+            Class PlaceAnOrderInfoResponse.
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.PlaceAnOrderInfoResponse.OutTradeNo">
+            <summary>
+            订单单号
+            </summary>
+            <value>The out trade no.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.PlaceAnOrderInfoResponse.PaymentType">
+            <summary>
+            支付方式
+            </summary>
+            <value>The type of the payment.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.PlaceAnOrderInfoResponse.WeChatAmount">
+            <summary>
+            微信支付所需金额
+            </summary>
+            <value>The we chat amount.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.PlaceAnOrderInfoResponse.MwebUrl">
+            <summary>
+            微信JsPay支付获取Code地址
+            </summary>
+            <value>The mweb URL.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Model.Dtos.PlaceOrderRequest">
+            <summary>
+             下订单请求
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.PlaceOrderRequest.Payment">
+            <summary>
+            支付方式 
+            </summary>
+            <value>The payment.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.PlaceOrderRequest.PayPassWord">
+            <summary>
+            支付密码
+            </summary>
+            <value>The pay pass word.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.PlaceOrderRequest.SuccessUrl">
+            <summary>
+            jaPay支付时，支付成功后的跳转地址
+            </summary>
+            <value>The success URL.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.PlaceOrderRequest.FaildUrl">
+            <summary>
+            jsPay支付时，支付失败后的跳转地址
+            </summary>
+            <value>The faild URL.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.PlaceOrderRequest.AddtoOrderInfos">
+            <summary>
+            要添加到订单的数据请求信息
+            </summary>
+            <value>The addto order infos.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Model.Dtos.AddtoOrderInfo">
+            <summary>
+            要添加到订单的数据请求信息
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.AddtoOrderInfo.ShoppingCartId">
+            <summary>
+            购物车编号
+            </summary>
+            <value>The shopping cart identifier.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.AddtoOrderInfo.Remark">
+            <summary>
+            备注
+            </summary>
+            <value>The remark.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Model.Dtos.RegisterRequest">
+            <summary>
+            注册请求数据
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.RegisterRequest.CPhone">
+            <summary>
+            手机号码
+            </summary>
+            <value>The c phone.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.RegisterRequest.Code">
+            <summary>
+            验证码
+            </summary>
+            <value>The code.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Model.Dtos.SendCodeRequest">
+            <summary>
+            发送验证码
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.SendCodeRequest.Cphone">
+            <summary>
+            手机号码
+            </summary>
+            <value>The cphone.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Model.Dtos.StrokePayRequest">
+            <summary>
+            行程支付请求
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.StrokePayRequest.StrokeId">
+            <summary>
+            行程编号
+            </summary>
+            <value>The stroke identifier.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.StrokePayRequest.SuccessUrl">
+            <summary>
+            支付成功后的返回地址
+            </summary>
+            <value>The success URL.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.StrokePayRequest.FaildUrl">
+            <summary>
+            支付失败后的返回地址
+            </summary>
+            <value>The faild URL.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Model.Dtos.StrokeSearchRequest">
+            <summary>
+             行程搜索请求
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.StrokeSearchRequest.SearchKey">
+            <summary>
+            搜索关键字
+            </summary>
+            <value>The search key.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Model.Dtos.StrokeSearchResponse">
+            <summary>
+            Class StrokeSearchResponse.
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.StrokeSearchResponse.Id">
+            <summary>
+            行程编号
+            </summary>
+            <value>The identifier.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.StrokeSearchResponse.Title">
+            <summary>
+            标题
+            </summary>
+            <value>The title.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.StrokeSearchResponse.City">
+            <summary>
+            出发城市
+            </summary>
+            <value>The city.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.StrokeSearchResponse.Destination">
+            <summary>
+            目的地
+            </summary>
+            <value>The destination.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.StrokeSearchResponse.ImageUrl">
+            <summary>
+            封面地址
+            </summary>
+            <value>The image URL.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.StrokeSearchResponse.ImageThumb">
+            <summary>
+            封面缩略图 
+            </summary>
+            <value>The image thumb.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Model.Dtos.StrokeShareRequest">
+            <summary>
+            行程分享请求数据
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.StrokeShareRequest.StrokeId">
+             <summary>
+            行程编号
+             </summary>
+             <value>The stroke identifier.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.StrokeShareRequest.ShareUrl">
+            <summary>
+            分享连接地址
+            </summary>
+            <value>The shareurl.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Model.Dtos.StrokeShareResponse">
+            <summary>
+            行程分享数据
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.StrokeShareResponse.AppId">
+            <summary>
+            微信公众号appId
+            </summary>
+            <value>The application identifier.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.StrokeShareResponse.NonceStr">
+            <summary>
+            随机数
+            </summary>
+            <value>The nonce string.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.StrokeShareResponse.Signature">
+            <summary>
+            签名
+            </summary>
+            <value>The signature.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.StrokeShareResponse.Timestamp">
+            <summary>
+            时间戳
+            </summary>
+            <value>The timestamp.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.StrokeShareResponse.ShareImageUrl">
+            <summary>
+            分享封面地址
+            </summary>
+            <value>The share image URL.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.StrokeShareResponse.ShareUrl">
+            <summary>
+             分享地址
+            </summary>
+            <value>The share URL.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Model.Dtos.UserLoginRequest">
+            <summary>
+            用户登陆请求数据
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.UserLoginRequest.CPhone">
+            <summary>
+            登陆手机号码
+            </summary>
+            <value>The c phone.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.UserLoginRequest.PassWord">
+            <summary>
+            登陆密码
+            </summary>
+            <value>The pass word.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Model.Dtos.UserLoginResponse">
+            <summary>
+            用户登陆返回信息
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.UserLoginResponse.UserId">
+            <summary>
+            用户编号
+            </summary>
+            <value>The user identifier.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.UserLoginResponse.Name">
+            <summary>
+            登陆用户名称
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.UserLoginResponse.Token">
+            <summary>
+            Token(令牌)数据
+            </summary>
+            <value>The token.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Model.Dtos.WeChatLoginByRequest">
+            <summary>
+            通过openId进行登陆请求
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.WeChatLoginByRequest.OpenId">
+            <summary>
+            微信openId
+            </summary>
+            <value>The open identifier.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.WeChatLoginByRequest.Nickname">
+            <summary>
+            微信昵称
+            </summary>
+            <value>The nickname.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.WeChatLoginByRequest.Sex">
+            <summary>
+             性别 
+            </summary>
+            <value>The sex.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.WeChatLoginByRequest.City">
+            <summary>
+            城市
+            </summary>
+            <value>The city.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.WeChatLoginByRequest.Headimgurl">
+            <summary>
+            微信头像地址
+            </summary>
+            <value>The headimgurl.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.WeChatLoginByRequest.Province">
+            <summary>
+            省
+            </summary>
+            <value>The province.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.WeChatLoginByRequest.State">
+            <summary>
+            Gets or sets the state.
+            </summary>
+            <value>The state.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Model.Dtos.WeChatLoginRequest">
+            <summary>
+            微信登陆请求
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.WeChatLoginRequest.Code">
+            <summary>
+            Gets or sets the code.
+            </summary>
+            <value>The code.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.WeChatLoginRequest.State">
+            <summary>
+            Gets or sets the state.
+            </summary>
+            <value>The state.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Model.Dtos.WeChatPayRequest">
+            <summary>
+            调起微信支付请求参数
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.WeChatPayRequest.Body">
+            <summary>
+            商品描述
+            </summary>
+            <value>The body.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.WeChatPayRequest.PaymentId">
+            <summary>
+            支付订单编号
+            </summary>
+            <value>The payment identifier.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.WeChatPayRequest.TotalFee">
+            <summary>
+            订单总金额
+            </summary>
+            <value>The total fee.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.WeChatPayRequest.OrderIds">
+            <summary>
+            订单编号
+            </summary>
+            <value>The order ids.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.WeChatPayRequest.SignType">
+            <summary>
+            签名方式
+            </summary>
+            <value>The type of the sign.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.WeChatPayRequest.NotifyUrl">
+            <summary>
+            通知地址
+            </summary>
+            <value>The notify URL.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.WeChatPayRequest.SuccessUrl">
+            <summary>
+            jsPay支付时，支付成功后的跳转地址
+            </summary>
+            <value>The success URL.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.Dtos.WeChatPayRequest.FailedUrl">
+            <summary>
+            jsPay支付时，支付失败后的跳转地址
+            </summary>
+            <value>The failed URL.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Model.JwtOptions">
+            <summary>
+            授权
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.JwtOptions.IsHttps">
+            <summary>
+            Gets or sets a value indicating whether this instance is HTTPS.
+            </summary>
+            <value><c>true</c> if this instance is HTTPS; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.JwtOptions.Secret">
+            <summary>
+            Gets or sets the secret.
+            </summary>
+            <value>The secret.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.JwtOptions.Issuer">
+            <summary>
+            Gets or sets the issuer.
+            </summary>
+            <value>The issuer.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.JwtOptions.Audience">
+            <summary>
+            Gets or sets the audience.
+            </summary>
+            <value>The audience.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.JwtOptions.ExpireSeconds">
+            <summary>
+            Gets or sets the expire seconds.
+            </summary>
+            <value>The expire seconds.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.JwtOptions.IncludeErrorDetails">
+            <summary>
+            Gets or sets a value indicating whether [include error details].
+            </summary>
+            <value><c>true</c> if [include error details]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Model.WeChatOptions">
+            <summary>
+            微信支付参数
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.WeChatOptions.AppId">
+            <summary>
+            公众账号appId
+            </summary>
+            <value>The application identifier.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.WeChatOptions.Redirect_Url">
+            <summary>
+            登陆回调地址
+            </summary>
+            <value>The redirect URL.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.WeChatOptions.MchId">
+            <summary>
+            微信支付商户号
+            </summary>
+            <value>The MCH identifier.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.WeChatOptions.AppSecret">
+            <summary>
+            微信公众号应用密钥
+            </summary>
+            <value>The application secret.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.WeChatOptions.ApiKey">
+            <summary>
+            商户支付密钥key
+            </summary>
+            <value>The API key.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.WeChatOptions.CertificateAddress">
+            <summary>
+            证书地址
+            </summary>
+            <value>The certificate address.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Model.WeChatOptions.HostUrl">
+            <summary>
+            服务器主机地址 
+            </summary>
+            <value>The host URL.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Options.SMSOptions">
+            <summary>
+            发送短信
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Options.SMSOptions.ApiKey">
+            <summary>
+            Gets or sets the API key.
+            </summary>
+            <value>The API key.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Options.SMSOptions.ApiSecurity">
+            <summary>
+            Gets or sets the API security.
+            </summary>
+            <value>The API security.</value>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Program">
+            <summary>
+            Class Program.
+            </summary>
+        </member>
+        <member name="M:Cowboy.Stroke.AspNetCore.Program.Main(System.String[])">
+            <summary>
+            Defines the entry point of the application.
+            </summary>
+            <param name="args">The arguments.</param>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Startup">
+            <summary>
+            Class Startup.
+            </summary>
+        </member>
+        <member name="M:Cowboy.Stroke.AspNetCore.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cowboy.Stroke.AspNetCore.Startup"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Startup.Configuration">
+            <summary>
+            Gets the configuration.
+            </summary>
+            <value>The configuration.</value>
+        </member>
+        <member name="M:Cowboy.Stroke.AspNetCore.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configures the services.
+            </summary>
+            <param name="services">The services.</param>
+        </member>
+        <member name="M:Cowboy.Stroke.AspNetCore.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            Configures the specified application.
+            </summary>
+            <param name="app">The application.</param>
+            <param name="env">The env.</param>
+        </member>
+        <member name="T:Cowboy.Stroke.AspNetCore.Views.WeChat.WeChatPayParameter">
+            <summary>
+            微信支付调起参数
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Views.WeChat.WeChatPayParameter.AppId">
+            <summary>
+            微信应用AppId 
+            </summary>
+            <value>The application identifier.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Views.WeChat.WeChatPayParameter.MchId">
+            <summary>
+            微信商户号
+            </summary>
+            <value>The MCH identifier.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Views.WeChat.WeChatPayParameter.NonceStr">
+            <summary>
+            微信随机数 
+            </summary>
+            <value>The nonce string.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Views.WeChat.WeChatPayParameter.TimeStamp">
+            <summary>
+            时间戳
+            </summary>
+            <value>The time stamp.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Views.WeChat.WeChatPayParameter.Package">
+            <summary>
+            Gets or sets the package.
+            </summary>
+            <value>The package.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Views.WeChat.WeChatPayParameter.PaySign">
+            <summary>
+            支付签名 
+            </summary>
+            <value>The pay sign.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Views.WeChat.WeChatPayParameter.SuccessUrl">
+            <summary>
+            支付成功后的返回参数 
+            </summary>
+            <value>The success URL.</value>
+        </member>
+        <member name="P:Cowboy.Stroke.AspNetCore.Views.WeChat.WeChatPayParameter.FailedUrl">
+            <summary>
+             支付失败后 
+            </summary>
+            <value>The faild URL.</value>
+        </member>
+        <member name="T:Cowboy.Stoke.AspNetCore.ApiControllers.Filters.AuthFilterAttribute">
+            <summary>
+            Class AuthFilterAttribute.
+            </summary>
+            <seealso cref="T:Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute" />
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.ApiControllers.Filters.AuthFilterAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Called when [action executing].
+            </summary>
+            <param name="context">The context.</param>
+            <inheritdoc />
+        </member>
+        <member name="T:Cowboy.Stoke.AspNetCore.ApiControllers.Filters.Defines">
+            <summary>
+            Class Defines.
+            </summary>
+        </member>
+        <member name="F:Cowboy.Stoke.AspNetCore.ApiControllers.Filters.Defines.Default_Cors_Policy">
+            <summary>
+            The default cors policy
+            </summary>
+        </member>
+        <member name="T:Cowboy.Stoke.AspNetCore.ApiControllers.OrderingController">
+            <summary>
+             订单管理
+            </summary>
+            <seealso cref="T:Cowboy.Stoke.AspNetCore.Controllers.ApiController" />
+        </member>
+        <member name="F:Cowboy.Stoke.AspNetCore.ApiControllers.OrderingController.orderingService">
+            <summary>
+            订单服务
+            </summary>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.ApiControllers.OrderingController.#ctor(Cowboy.Stoke.AspNetCore.IService.IOrderingService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cowboy.Stoke.AspNetCore.ApiControllers.OrderingController"/> class.
+            </summary>
+            <param name="orderingService">The ordering service.</param>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.ApiControllers.OrderingController.GetOrderingInfo">
+            <summary>
+            获取订单信息
+            </summary>
+            <returns>Task&lt;Response&lt;GetOrderingResponse&gt;&gt;.</returns>
+        </member>
+        <member name="T:Cowboy.Stoke.AspNetCore.ApiControllers.ShoppingCatController">
+             <summary>
+            购物车管理
+             </summary>
+             <seealso cref="T:Cowboy.Stoke.AspNetCore.Controllers.ApiController" />
+        </member>
+        <member name="F:Cowboy.Stoke.AspNetCore.ApiControllers.ShoppingCatController.shoppingCartService">
+            <summary>
+            The shopping cart service
+            </summary>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.ApiControllers.ShoppingCatController.#ctor(Cowboy.Stoke.AspNetCore.IService.IShoppingCartService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cowboy.Stoke.AspNetCore.ApiControllers.ShoppingCatController"/> class.
+            </summary>
+            <param name="shoppingCartService">The shopping cart service.</param>
+        </member>
+        <member name="T:Cowboy.Stoke.AspNetCore.ApiControllers.StrokeController">
+            <summary>
+             行程管理
+            </summary>
+            <seealso cref="T:Cowboy.Stoke.AspNetCore.Controllers.ApiController" />
+        </member>
+        <member name="F:Cowboy.Stoke.AspNetCore.ApiControllers.StrokeController.strokeService">
+            <summary>
+            The stoke service
+            </summary>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.ApiControllers.StrokeController.#ctor(Cowboy.Stoke.AspNetCore.IService.IStrokeService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cowboy.Stoke.AspNetCore.ApiControllers.StrokeController"/> class.
+            </summary>
+            <param name="strokeService"></param>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.ApiControllers.StrokeController.GetBanner(Cowboy.Stroke.AspNetCore.Model.Dtos.GetBannerRequest)">
+            <summary>
+            获取首页Banner数据
+            </summary>
+            <param name="request">The request.</param>
+            <returns>Task&lt;Response&lt;GetBannerResponse&gt;&gt;.</returns>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.ApiControllers.StrokeController.GetCityInfo(Cowboy.Stroke.AspNetCore.Model.Dtos.GetCityRequest)">
+            <summary>
+            获取全部城市信息
+            </summary>
+            <param name="request">The request.</param>
+            <returns>Task&lt;Response&lt;GetCityResponse[]&gt;&gt;.</returns>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.ApiControllers.StrokeController.GetRecommendStroke(Cowboy.Stroke.AspNetCore.Model.Dtos.GetRecommendStrokeRequest)">
+            <summary>
+            首页获取推荐行程
+            </summary>
+            <param name="request">The request.</param>
+            <returns>Task&lt;Response&lt;GetRecommendStokeResponse&gt;&gt;.</returns>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.ApiControllers.StrokeController.GetStrokeHot(Cowboy.Stroke.AspNetCore.Model.Dtos.GetStrokeHotRequest)">
+            <summary>
+            获取国际，国内，省内热门行程
+            </summary>
+            <param name="GetStrokeHotRequest">The get stroke hot request.</param>
+            <returns>Task&lt;Response&lt;GetStrokeHotResponse&gt;&gt;.</returns>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.ApiControllers.StrokeController.GetStrokeDetail(Cowboy.Stroke.AspNetCore.Model.Dtos.GetStrokeDetailRequest)">
+            <summary>
+            获取行程详情信息
+            </summary>
+            <param name="request">The request.</param>
+            <returns>Response&lt;GetStokeDetailResponse&gt;.</returns>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.ApiControllers.StrokeController.CollectStroke(Cowboy.Stroke.AspNetCore.Model.Dtos.CollectStrokeRequest)">
+            <summary>
+            收藏行程
+            </summary>
+            <param name="request">The request.</param>
+            <returns>Task&lt;Response&gt;.</returns>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.ApiControllers.StrokeController.GetCollectStroke">
+            <summary>
+            获取所有的收藏行程
+            </summary>
+            <returns>Task&lt;Response&lt;GetCollectStokeResponse&gt;&gt;.</returns>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.ApiControllers.StrokeController.StrokeShare(Cowboy.Stroke.AspNetCore.Model.Dtos.StrokeShareRequest)">
+            <summary>
+            行程分享
+            </summary>
+            <param name="request">The request.</param>
+            <returns>Task&lt;Response&lt;StrokeShareResponse&gt;&gt;.</returns>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.ApiControllers.StrokeController.StrokeSearch(Cowboy.Stroke.AspNetCore.Model.Dtos.StrokeSearchRequest)">
+            <summary>
+            行程搜索
+            </summary>
+            <param name="request">The request.</param>
+            <returns>Task&lt;Response&lt;StrokeSearchResponse&gt;&gt;.</returns>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.ApiControllers.StrokeController.AddCustomize(Cowboy.Stroke.AspNetCore.Model.Dtos.AddCustomizeRequest)">
+            <summary>
+            添加私人定制行程
+            </summary>
+            <param name="request">The request.</param>
+            <returns>Task&lt;Response&lt;AddCustomizeResponse&gt;&gt;.</returns>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.ApiControllers.StrokeController.GetCustomize(Cowboy.Stroke.AspNetCore.Model.Dtos.GetCustomizeRequest)">
+            <summary>
+            获取全部私人定制行程
+            </summary>
+            <param name="request">The request.</param>
+            <returns>Task&lt;Response&lt;GetCustomizeResponse&gt;&gt;.</returns>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.ApiControllers.StrokeController.StrokePay(Cowboy.Stroke.AspNetCore.Model.Dtos.StrokePayRequest)">
+            <summary>
+            行程支付 
+            </summary>
+            <param name="request">The request.</param>
+            <returns>Task&lt;Response&lt;PlaceAnOrderInfoResponse&gt;&gt;.</returns>
+        </member>
+        <member name="T:Cowboy.Stoke.AspNetCore.ApiControllers.UserController">
+            <summary>
+            Class UserController.
+            </summary>
+            <seealso cref="T:Cowboy.Stoke.AspNetCore.Controllers.ApiController" />
+        </member>
+        <member name="F:Cowboy.Stoke.AspNetCore.ApiControllers.UserController.userService">
+            <summary>
+            The user service
+            </summary>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.ApiControllers.UserController.UserLogin(Cowboy.Stroke.AspNetCore.Model.Dtos.UserLoginRequest)">
+            <summary>
+            用户登陆
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.ApiControllers.UserController.Register(Cowboy.Stroke.AspNetCore.Model.Dtos.RegisterRequest)">
+            <summary>
+            绑定手机号
+            </summary>
+            <param name="request">The request.</param>
+            <returns>Task&lt;Response&gt;.</returns>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.ApiControllers.UserController.SendIdentifyingCode(Cowboy.Stroke.AspNetCore.Model.Dtos.SendCodeRequest)">
+            <summary>
+            发送验证码
+            </summary>
+            <param name="request">The phone.</param>
+            <returns>Task&lt;Response&lt;System.Boolean&gt;&gt;.</returns>
+        </member>
+        <member name="T:Cowboy.Stoke.AspNetCore.Controllers.ApiController">
+            <summary>
+            Class ApiController.
+            </summary>
+            <seealso cref="T:Microsoft.AspNetCore.Mvc.ControllerBase" />
+        </member>
+        <member name="P:Cowboy.Stoke.AspNetCore.Controllers.ApiController.UserId">
+            <summary>
+            用户编号
+            </summary>
+            <value>The user identifier.</value>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.ExtensionMethods.Extensions.EncryptMd5(System.String)">
+            <summary>
+            将字符串加密为相等的Md5值
+            </summary>
+            <param name="sourceString">待转换的字符串</param>
+            <returns>返回已加密的字符串</returns>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.ExtensionMethods.Extensions.EncryptPassword(System.String)">
+            <summary>
+            将字符串加密为一个Md5密码字符串
+            </summary>
+            <param name="inputString">源字符串.</param>
+            <returns>如果为空，返回Null，否则返回对应的加密字符串.</returns>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.ExtensionMethods.Extensions.ToPagedQuery``1(System.Linq.IQueryable{``0},System.Int32,System.Int32)">
+            <summary>
+            获取分页查询
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="query">The query.</param>
+            <param name="pageIndex">Index of the page.</param>
+            <param name="pageSize">Size of the page.</param>
+            <returns>IQueryable&lt;T&gt;.</returns>
+            <exception cref="T:System.ArgumentNullException">query</exception>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.ExtensionMethods.Extensions.ToPagedQuery``1(System.Linq.IQueryable{``0},Cowboy.Stoke.AspNetCore.Model.PageRequest)">
+            <summary>
+            获取分页查询
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="query">The query.</param>
+            <param name="request">The request.</param>
+            <returns>IQueryable&lt;T&gt;.</returns>
+            <exception cref="T:System.ArgumentNullException">request</exception>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.ExtensionMethods.Extensions.ToPagedResult``1(System.Linq.IQueryable{``0},System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            获取分页查询的结果
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="query">The query.</param>
+            <param name="pageIndex">Index of the page.</param>
+            <param name="pageSize">Size of the page.</param>
+            <param name="includeTotalSize">if set to <c>true</c> [include total size].</param>
+            <returns>PageResult&lt;T&gt;.</returns>
+            <exception cref="T:System.ArgumentNullException">query</exception>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.ExtensionMethods.Extensions.ToPagedResult``1(System.Linq.IQueryable{``0},Cowboy.Stoke.AspNetCore.Model.PageRequest)">
+            <summary>
+            获取分页查询的结果
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="query">The query.</param>
+            <param name="request">The request.</param>
+            <returns>ResponsePaging&lt;T&gt;.</returns>
+            <exception cref="T:System.ArgumentNullException">request</exception>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.ExtensionMethods.Extensions.WhereIf``1(System.Linq.IQueryable{``0},System.Boolean,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            如果值为真，使用输入的条件过滤查询
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="queryable">The queryable.</param>
+            <param name="condition">if set to <c>true</c> [condition].</param>
+            <param name="predicate">The predicate.</param>
+            <returns>IQueryable&lt;T&gt;.</returns>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.ExtensionMethods.Extensions.WhereIf``1(System.Linq.IQueryable{``0},System.Boolean,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            如果值为真，使用输入的条件过滤查询
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="queryable">The queryable.</param>
+            <param name="condition">if set to <c>true</c> [condition].</param>
+            <param name="predicate">The predicate.</param>
+            <param name="elsePredicate">The else predicate.</param>
+            <returns>IQueryable&lt;T&gt;.</returns>
+        </member>
+        <member name="T:Cowboy.Stoke.AspNetCore.IService.Implement.OrderingService">
+            <summary>
+            订单服务
+            </summary>
+            <seealso cref="T:Cowboy.Stoke.AspNetCore.IService.IOrderingService" />
+        </member>
+        <member name="F:Cowboy.Stoke.AspNetCore.IService.Implement.OrderingService.strokeContext">
+            <summary>
+            数据上下文
+            </summary>
+        </member>
+        <member name="F:Cowboy.Stoke.AspNetCore.IService.Implement.OrderingService.logger">
+            <summary>
+            The logger
+            </summary>
+        </member>
+        <member name="F:Cowboy.Stoke.AspNetCore.IService.Implement.OrderingService.memoryCache">
+            <summary>
+            The memory cache
+            </summary>
+        </member>
+        <member name="F:Cowboy.Stoke.AspNetCore.IService.Implement.OrderingService.contextAccessor">
+            <summary>
+            The context accessor
+            </summary>
+        </member>
+        <member name="F:Cowboy.Stoke.AspNetCore.IService.Implement.OrderingService.weChatOptions">
+            <summary>
+            微信支付参数
+            </summary>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.Implement.OrderingService.#ctor(Cowboy.TravelShop.Model.StrokeContext,Microsoft.Extensions.Logging.ILogger{Cowboy.Stoke.AspNetCore.IService.IOrderingService},Microsoft.Extensions.Options.IOptions{Cowboy.Stroke.AspNetCore.Model.WeChatOptions},Microsoft.AspNetCore.Http.IHttpContextAccessor,Microsoft.Extensions.Caching.Memory.IMemoryCache)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cowboy.Stoke.AspNetCore.IService.Implement.OrderingService" /> class.
+            </summary>
+            <param name="strokeContext">The stroke context.</param>
+            <param name="logger">The logger.</param>
+            <param name="weChatOptions">The we chat options.</param>
+            <param name="contextAccessor"></param>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.Implement.OrderingService.GetOrderingInfo">
+            <summary>
+            获取订单信息
+            </summary>
+            <returns>Task&lt;Response&lt;GetOrderingResponse&gt;&gt;.</returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:Cowboy.Stoke.AspNetCore.IService.Implement.ShoppingCartService">
+            <summary>
+            购物车服务
+            </summary>
+            <seealso cref="T:Cowboy.Stoke.AspNetCore.IService.IShoppingCartService" />
+        </member>
+        <member name="F:Cowboy.Stoke.AspNetCore.IService.Implement.ShoppingCartService.strokeContext">
+            <summary>
+            The stoke context
+            </summary>
+        </member>
+        <member name="F:Cowboy.Stoke.AspNetCore.IService.Implement.ShoppingCartService.logger">
+            <summary>
+            The logger
+            </summary>
+        </member>
+        <member name="F:Cowboy.Stoke.AspNetCore.IService.Implement.ShoppingCartService.contextAccessor">
+            <summary>
+            The context accessor
+            </summary>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.Implement.ShoppingCartService.#ctor(Cowboy.TravelShop.Model.StrokeContext,Microsoft.Extensions.Logging.ILogger{Cowboy.Stoke.AspNetCore.IService.IShoppingCartService},Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cowboy.Stoke.AspNetCore.IService.Implement.ShoppingCartService"/> class.
+            </summary>
+            <param name="strokeContext"></param>
+            <param name="logger"></param>
+            <param name="contextAccessor"></param>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.Implement.ShoppingCartService.AddtoShoppingCart(Cowboy.Stroke.AspNetCore.Model.Dtos.AddtoShoppingCartRequest)">
+            <summary>
+            行程添加到购物车
+            </summary>
+            <param name="request">The request.</param>
+            <returns>Task&lt;Response&gt;.</returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.Implement.ShoppingCartService.DeleteShoppingCart(Cowboy.Stroke.AspNetCore.Model.Dtos.DeleteShoppingCartRequest)">
+            <summary>
+            删除购物车数据
+            </summary>
+            <param name="request">The request.</param>
+            <returns>Task&lt;Response&gt;.</returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.Implement.ShoppingCartService.GetShoppingCartInfo">
+            <summary>
+            获取购物车数据信息
+            </summary>
+            <param name="userId">The user identifier.</param>
+            <returns>Task&lt;Response&lt;GetShoppingCartInfoResponse&gt;&gt;.</returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:Cowboy.Stoke.AspNetCore.IService.Implement.StrokeService">
+            <summary>
+            行程服务
+            </summary>
+            <seealso cref="T:Cowboy.Stoke.AspNetCore.IService.IStrokeService" />
+        </member>
+        <member name="F:Cowboy.Stoke.AspNetCore.IService.Implement.StrokeService.strokeContext">
+            <summary>
+            行程数据上下文
+            </summary>
+        </member>
+        <member name="F:Cowboy.Stoke.AspNetCore.IService.Implement.StrokeService.weChatOptions">
+            <summary>
+            微信支付参数
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stoke.AspNetCore.IService.Implement.StrokeService.Logger">
+            <summary>
+             日志
+            </summary>
+            <value>The logger.</value>
+        </member>
+        <member name="F:Cowboy.Stoke.AspNetCore.IService.Implement.StrokeService.memoryCache">
+            <summary>
+            The memory cache
+            </summary>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.Implement.StrokeService.#ctor(Cowboy.TravelShop.Model.StrokeContext,Microsoft.Extensions.Options.IOptions{Cowboy.Stroke.AspNetCore.Model.WeChatOptions},Microsoft.Extensions.Logging.ILogger{Cowboy.Stoke.AspNetCore.IService.Implement.StrokeService},Microsoft.AspNetCore.Http.IHttpContextAccessor,Microsoft.Extensions.Caching.Memory.IMemoryCache)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cowboy.Stoke.AspNetCore.IService.Implement.StrokeService"/> class.
+            </summary>
+            <param name="strokeContext">The stroke context.</param>
+            <param name="weChatOptions">The we chat options.</param>
+            <param name="logger"></param>
+            <param name="contextAccessor"></param>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.Implement.StrokeService.GetBanner(Cowboy.Stroke.AspNetCore.Model.Dtos.GetBannerRequest)">
+            <summary>
+            获取Banner数据
+            </summary>
+            <returns>Task&lt;Response&lt;GetBannerResponse&gt;&gt;.</returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.Implement.StrokeService.GetCityInfo(Cowboy.Stroke.AspNetCore.Model.Dtos.GetCityRequest)">
+            <summary>
+            获取全部城市信息
+            </summary>
+            <param name="request">The request.</param>
+            <returns>Task&lt;Response&lt;GetCityResponse[]&gt;&gt;.</returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.Implement.StrokeService.GetRecommendStroke(Cowboy.Stroke.AspNetCore.Model.Dtos.GetRecommendStrokeRequest)">
+            <summary>
+            获取推荐行程
+            </summary>
+            <param name="request">The request.</param>
+            <returns>Task&lt;Response&lt;GetRecommendStokeResponse&gt;&gt;.</returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.Implement.StrokeService.GetStrokeDetail(Cowboy.Stroke.AspNetCore.Model.Dtos.GetStrokeDetailRequest)">
+            <summary>
+            获取行程详情信息
+            </summary>
+            <param name="request">The request.</param>
+            <param name="userId"></param>
+            <returns>Response&lt;GetStokeDetailResponse&gt;.</returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.Implement.StrokeService.CollectStroke(Cowboy.Stroke.AspNetCore.Model.Dtos.CollectStrokeRequest)">
+            <summary>
+            收藏行程
+            </summary>
+            <param name="request">The request.</param>
+            <param name="userId"></param>
+            <returns>Task&lt;Response&gt;.</returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.Implement.StrokeService.GetCollectStroke">
+            <summary>
+            获取所有的收藏行程
+            </summary>
+            <param name="userId">The user identifier.</param>
+            <returns>Task&lt;Response&lt;GetCollectStokeResponse&gt;&gt;.</returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.Implement.StrokeService.StrokeShare(Cowboy.Stroke.AspNetCore.Model.Dtos.StrokeShareRequest)">
+            <summary>
+            行程分享
+            </summary>
+            <param name="request">The request.</param>
+            <param name="userId">The user identifier.</param>
+            <returns>Task&lt;Response&lt;StrokeShareResponse&gt;&gt;.</returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.Implement.StrokeService.StrokeSearch(Cowboy.Stroke.AspNetCore.Model.Dtos.StrokeSearchRequest)">
+            <summary>
+            行程搜索
+            </summary>
+            <param name="request">The request.</param>
+            <returns>Task&lt;Response&lt;StrokeSearchResponse&gt;&gt;.</returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.Implement.StrokeService.AddCustomize(Cowboy.Stroke.AspNetCore.Model.Dtos.AddCustomizeRequest)">
+            <summary>
+            添加私人定制行程
+            </summary>
+            <param name="request">The request.</param>
+            <returns>Task&lt;Response&lt;AddCustomizeResponse&gt;&gt;.</returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.Implement.StrokeService.GetCustomize(Cowboy.Stroke.AspNetCore.Model.Dtos.GetCustomizeRequest)">
+            <summary>
+            获取全部私人定制行程
+            </summary>
+            <param name="request">The request.</param>
+            <returns>Task&lt;Response&lt;GetCustomizeResponse&gt;&gt;.</returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.Implement.StrokeService.GetJsPayRedirect(Cowboy.Stroke.AspNetCore.Model.Dtos.WeChatPayRequest,Cowboy.TravelShop.Model.PaymentType)">
+            <summary>
+            创建微信JsPay支付请求信息
+            </summary>
+            <param name="weChatPay">The we chat pay.</param>
+            <param name="paymentType">Type of the payment.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.Implement.StrokeService.CreatePaymentInfo(System.String,Cowboy.TravelShop.Model.PaymentType)">
+            <summary>
+            创建支付订单信息
+            </summary>
+            <param name="orderIds">The order ids.</param>
+            <param name="paymentType">Type of the payment.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.Implement.StrokeService.StrokePay(Cowboy.Stroke.AspNetCore.Model.Dtos.StrokePayRequest)">
+            <summary>
+            行程支付
+            </summary>
+            <param name="request">The request.</param>
+            <returns>Task&lt;Response&lt;PlaceAnOrderInfoResponse&gt;&gt;.</returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.Implement.StrokeService.GetStrokeHot(Cowboy.Stroke.AspNetCore.Model.Dtos.GetStrokeHotRequest)">
+            <summary>
+            获取国际，国内，省内热门行程
+            </summary>
+            <param name="request">The request.</param>
+            <returns>Task&lt;Response&lt;GetStrokeHotResponse&gt;&gt;.</returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:Cowboy.Stoke.AspNetCore.IService.Implement.UserService">
+            <summary>
+            Class UserService.
+            </summary>
+            <seealso cref="T:Cowboy.Stoke.AspNetCore.IService.IUserService" />
+        </member>
+        <member name="F:Cowboy.Stoke.AspNetCore.IService.Implement.UserService.strokeContext">
+            <summary>
+            The stroke context
+            </summary>
+        </member>
+        <member name="F:Cowboy.Stoke.AspNetCore.IService.Implement.UserService.weChatOptions">
+            <summary>
+            The we chat options
+            </summary>
+        </member>
+        <member name="F:Cowboy.Stoke.AspNetCore.IService.Implement.UserService.jwtOptions">
+            <summary>
+            The JWT options
+            </summary>
+        </member>
+        <member name="F:Cowboy.Stoke.AspNetCore.IService.Implement.UserService.memory">
+            <summary>
+            The memory
+            </summary>
+        </member>
+        <member name="F:Cowboy.Stoke.AspNetCore.IService.Implement.UserService.smsOptions">
+            <summary>
+            The options
+            </summary>
+        </member>
+        <member name="F:Cowboy.Stoke.AspNetCore.IService.Implement.UserService.contextAccessor">
+            <summary>
+            The context accessor
+            </summary>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.Implement.UserService.#ctor(Cowboy.TravelShop.Model.StrokeContext,Microsoft.Extensions.Options.IOptions{Cowboy.Stroke.AspNetCore.Model.WeChatOptions},Microsoft.Extensions.Logging.ILogger{Cowboy.Stoke.AspNetCore.IService.Implement.UserService},Microsoft.Extensions.Options.IOptions{Cowboy.Stroke.AspNetCore.Model.JwtOptions},Microsoft.AspNetCore.Http.IHttpContextAccessor,Microsoft.Extensions.Options.IOptions{Cowboy.Stroke.AspNetCore.Options.SMSOptions},Microsoft.Extensions.Caching.Memory.IMemoryCache)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cowboy.Stoke.AspNetCore.IService.Implement.UserService"/> class.
+            </summary>
+            <param name="strokeContext">The stroke context.</param>
+            <param name="weChatOptions">The we chat options.</param>
+            <param name="logger"></param>
+            <param name="jwtOptions"></param>
+            <param name="contextAccessor"></param>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.Implement.UserService.Register(Cowboy.Stroke.AspNetCore.Model.Dtos.RegisterRequest)">
+            <summary>
+            绑定手机号
+            </summary>
+            <param name="request">The request.</param>
+            <returns>Task&lt;Response&gt;.</returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.Implement.UserService.UserLogin(Cowboy.Stroke.AspNetCore.Model.Dtos.UserLoginRequest)">
+            <summary>
+            用户登陆
+            </summary>
+            <returns>Response.</returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.Implement.UserService.WeChatLogin(System.String,System.String)">
+            <summary>
+            微信登陆
+            </summary>
+            <param name="request">The request.</param>
+            <returns>Task&lt;Response&lt;UserLoginResponse&gt;&gt;.</returns>
+            <exception cref="T:System.Exception">
+            微信授权登陆失败!
+            or
+            微信登陆授权失败
+            </exception>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.Implement.UserService.CreateToken(System.String,System.Int64)">
+            <summary>
+            创建Token
+            </summary>
+            <param name="userName">用户名称</param>
+            <param name="userId">用户编号</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.Implement.UserService.SendIdentifyingCodeAsync(Cowboy.Stroke.AspNetCore.Model.Dtos.SendCodeRequest)">
+            <summary>
+            发送验证码
+            </summary>
+            <param name="phone">The phone.</param>
+            <returns>Task&lt;Response&lt;System.Boolean&gt;&gt;.</returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.Implement.UserService.ValidateIdentifyingCodeAsync(System.String,System.String)">
+            <summary>
+            验证验证码是否正确
+            </summary>
+            <param name="phone">The phone.</param>
+            <param name="code">The code.</param>
+            <returns>Task&lt;Response&lt;System.Boolean&gt;&gt;.</returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.Implement.UserService._SendMessage2Phone(System.String,System.String,System.String)">
+            <summary>
+            发送短信
+            </summary>
+            <param name="phone">The phone.</param>
+            <param name="message">The message.</param>
+            <param name="code">The code.</param>
+            <returns>Task&lt;System.Boolean&gt;.</returns>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.Implement.UserService.WeChatLoginBy(Cowboy.Stroke.AspNetCore.Model.Dtos.WeChatLoginByRequest)">
+            <summary>
+            通过微信openId进行登陆
+            </summary>
+            <param name="request">The request.</param>
+            <returns>Task&lt;Response&lt;UserLoginResponse&gt;&gt;.</returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:Cowboy.Stoke.AspNetCore.IService.IOrderingService">
+            <summary>
+            订单服务
+            </summary>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.IOrderingService.GetOrderingInfo">
+            <summary>
+            获取订单信息
+            </summary>
+            <returns>Task&lt;Response&lt;GetOrderingResponse&gt;&gt;.</returns>
+        </member>
+        <member name="T:Cowboy.Stoke.AspNetCore.IService.IShoppingCartService">
+             <summary>
+            购物车服务
+             </summary>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.IShoppingCartService.AddtoShoppingCart(Cowboy.Stroke.AspNetCore.Model.Dtos.AddtoShoppingCartRequest)">
+            <summary>
+            行程添加到购物车
+            </summary>
+            <param name="request">The request.</param>
+            <returns>Task&lt;Response&gt;.</returns>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.IShoppingCartService.DeleteShoppingCart(Cowboy.Stroke.AspNetCore.Model.Dtos.DeleteShoppingCartRequest)">
+            <summary>
+            删除购物车数据
+            </summary>
+            <param name="request">The request.</param>
+            <returns>Task&lt;Response&gt;.</returns>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.IShoppingCartService.GetShoppingCartInfo">
+            <summary>
+            获取购物车数据信息
+            </summary>
+            <param name="userId">The user identifier.</param>
+            <returns>Task&lt;Response&lt;GetShoppingCartInfoResponse&gt;&gt;.</returns>
+        </member>
+        <member name="T:Cowboy.Stoke.AspNetCore.IService.IStrokeService">
+            <summary>
+            Interface IStrokeService
+            </summary>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.IStrokeService.GetBanner(Cowboy.Stroke.AspNetCore.Model.Dtos.GetBannerRequest)">
+            <summary>
+            获取Banner数据
+            </summary>
+            <param name="request">The request.</param>
+            <returns>Task&lt;Response&lt;GetBannerResponse&gt;&gt;.</returns>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.IStrokeService.GetCityInfo(Cowboy.Stroke.AspNetCore.Model.Dtos.GetCityRequest)">
+            <summary>
+            获取全部城市信息
+            </summary>
+            <param name="request">The request.</param>
+            <returns>Task&lt;Response&lt;GetCityResponse[]&gt;&gt;.</returns>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.IStrokeService.GetRecommendStroke(Cowboy.Stroke.AspNetCore.Model.Dtos.GetRecommendStrokeRequest)">
+            <summary>
+            获取推荐行程
+            </summary>
+            <param name="request">The request.</param>
+            <returns>Task&lt;Response&lt;GetRecommendStokeResponse&gt;&gt;.</returns>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.IStrokeService.GetStrokeDetail(Cowboy.Stroke.AspNetCore.Model.Dtos.GetStrokeDetailRequest)">
+            <summary>
+            获取行程详情信息
+            </summary>
+            <param name="request">The request.</param>
+            <param name="userId"></param>
+            <returns>Response&lt;GetStokeDetailResponse&gt;.</returns>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.IStrokeService.CollectStroke(Cowboy.Stroke.AspNetCore.Model.Dtos.CollectStrokeRequest)">
+            <summary>
+            收藏行程
+            </summary>
+            <param name="request">The request.</param>
+            <param name="userId">The user identifier.</param>
+            <returns>Task&lt;Response&gt;.</returns>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.IStrokeService.GetCollectStroke">
+            <summary>
+            获取所有的收藏行程
+            </summary>
+            <param name="userId">The user identifier.</param>
+            <returns>Task&lt;Response&lt;GetCollectStokeResponse&gt;&gt;.</returns>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.IStrokeService.StrokeShare(Cowboy.Stroke.AspNetCore.Model.Dtos.StrokeShareRequest)">
+            <summary>
+            行程分享
+            </summary>
+            <param name="request">The request.</param>
+            <param name="userId">The user identifier.</param>
+            <returns>Task&lt;Response&lt;StrokeShareResponse&gt;&gt;.</returns>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.IStrokeService.StrokeSearch(Cowboy.Stroke.AspNetCore.Model.Dtos.StrokeSearchRequest)">
+            <summary>
+             行程搜索
+            </summary>
+            <param name="request">The request.</param>
+            <returns>Task&lt;Response&lt;StrokeSearchResponse&gt;&gt;.</returns>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.IStrokeService.GetStrokeHot(Cowboy.Stroke.AspNetCore.Model.Dtos.GetStrokeHotRequest)">
+             <summary>
+            获取国际，国内，省内热门行程
+             </summary>
+             <param name="request">The request.</param>
+             <returns>Task&lt;Response&lt;GetStrokeHotResponse&gt;&gt;.</returns>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.IStrokeService.AddCustomize(Cowboy.Stroke.AspNetCore.Model.Dtos.AddCustomizeRequest)">
+             <summary>
+            添加私人定制行程
+             </summary>
+             <param name="request">The request.</param>
+             <returns>Task&lt;Response&lt;AddCustomizeResponse&gt;&gt;.</returns>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.IStrokeService.GetCustomize(Cowboy.Stroke.AspNetCore.Model.Dtos.GetCustomizeRequest)">
+            <summary>
+            获取全部私人定制行程
+            </summary>
+            <param name="request">The request.</param>
+            <returns>Task&lt;Response&lt;GetCustomizeResponse&gt;&gt;.</returns>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.IStrokeService.StrokePay(Cowboy.Stroke.AspNetCore.Model.Dtos.StrokePayRequest)">
+            <summary>
+             行程支付
+            </summary>
+            <param name="request">The request.</param>
+            <returns>Task&lt;Response&lt;PlaceAnOrderInfoResponse&gt;&gt;.</returns>
+        </member>
+        <member name="T:Cowboy.Stoke.AspNetCore.IService.IUserService">
+            <summary>
+            Interface IUserService
+            </summary>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.IUserService.UserLogin(Cowboy.Stroke.AspNetCore.Model.Dtos.UserLoginRequest)">
+            <summary>
+            用户登陆
+            </summary>
+            <returns>Response.</returns>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.IUserService.Register(Cowboy.Stroke.AspNetCore.Model.Dtos.RegisterRequest)">
+            <summary>
+            绑定手机号
+            </summary>
+            <param name="request">The request.</param>
+            <returns>Task&lt;Response&gt;.</returns>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.IUserService.WeChatLogin(System.String,System.String)">
+            <summary>
+            微信登陆
+            </summary>
+            <param name="request">The request.</param>
+            <returns>Task&lt;Response&lt;UserLoginResponse&gt;&gt;.</returns>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.IUserService.SendIdentifyingCodeAsync(Cowboy.Stroke.AspNetCore.Model.Dtos.SendCodeRequest)">
+            <summary>
+            发送验证码
+            </summary>
+            <param name="request">The phone.</param>
+            <returns>Task&lt;Response&lt;System.Boolean&gt;&gt;.</returns>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.IService.IUserService.WeChatLoginBy(Cowboy.Stroke.AspNetCore.Model.Dtos.WeChatLoginByRequest)">
+            <summary>
+            通过微信openId进行登陆
+            </summary>
+            <param name="request">The request.</param>
+            <returns>Task&lt;Response&lt;UserLoginResponse&gt;&gt;.</returns>
+        </member>
+        <member name="T:Cowboy.Stoke.AspNetCore.Model.Dtos.GetRecommendStrokeResponse">
+            <summary>
+            获取推荐行程信息
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stoke.AspNetCore.Model.Dtos.GetRecommendStrokeResponse.Id">
+            <summary>
+            编号
+            </summary>
+            <value>The identifier.</value>
+        </member>
+        <member name="P:Cowboy.Stoke.AspNetCore.Model.Dtos.GetRecommendStrokeResponse.Title">
+            <summary>
+            行程编号
+            </summary>
+            <value>The title.</value>
+        </member>
+        <member name="P:Cowboy.Stoke.AspNetCore.Model.Dtos.GetRecommendStrokeResponse.ImageUrl">
+            <summary>
+            封面图片地址
+            </summary>
+            <value>The image URL.</value>
+        </member>
+        <member name="P:Cowboy.Stoke.AspNetCore.Model.Dtos.GetRecommendStrokeResponse.ImageThumb">
+            <summary>
+            封面图片缩略图
+            </summary>
+            <value>The image thumb.</value>
+        </member>
+        <member name="P:Cowboy.Stoke.AspNetCore.Model.Dtos.GetRecommendStrokeResponse.City">
+            <summary>
+            出发城市
+            </summary>
+            <value>The city.</value>
+        </member>
+        <member name="P:Cowboy.Stoke.AspNetCore.Model.Dtos.GetRecommendStrokeResponse.Destination">
+            <summary>
+            目的地
+            </summary>
+            <value>The destination.</value>
+        </member>
+        <member name="T:Cowboy.Stoke.AspNetCore.Model.PageRequest">
+            <summary>
+            分页请求
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stoke.AspNetCore.Model.PageRequest.PageIndex">
+            <summary>
+            分页页码
+            </summary>
+            <value>The index of the page.</value>
+        </member>
+        <member name="P:Cowboy.Stoke.AspNetCore.Model.PageRequest.PageSize">
+            <summary>
+            分页尺度
+            </summary>
+            <value>The size of the page.</value>
+        </member>
+        <member name="P:Cowboy.Stoke.AspNetCore.Model.PageRequest.IncludeTotalSize">
+            <summary>
+            包含全部项数
+            </summary>
+            <value><c>true</c> if [include total size]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:Cowboy.Stoke.AspNetCore.Model.Response">
+            <summary>
+            Class Response.
+            </summary>
+        </member>
+        <member name="P:Cowboy.Stoke.AspNetCore.Model.Response.Code">
+            <summary>
+            Gets or sets the code.
+            </summary>
+            <value>The code.</value>
+        </member>
+        <member name="P:Cowboy.Stoke.AspNetCore.Model.Response.Message">
+            <summary>
+            Gets or sets the message.
+            </summary>
+            <value>The message.</value>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.Model.Response.Success">
+            <summary>
+            Successes this instance.
+            </summary>
+            <returns>Response.</returns>
+        </member>
+        <member name="M:Cowboy.Stoke.AspNetCore.Model.Response.Success``1(``0)">
+            <summary>
+            Successes the specified data.
+            </summary>
+            <typeparam name="TData">The type of the t data.</typeparam>
+            <param name="data">The data.</param>
+            <returns>Response&lt;TData&gt;.</returns>
+        </member>
+        <member name="T:Cowboy.Stoke.AspNetCore.Model.ResponsePaged`1">
+            <summary>
+            Class ResponsePaged.
+            </summary>
+            <typeparam name="TData">The type of the t data.</typeparam>
+            <seealso cref="!:Cowboy.Stoke.AspNetCore.Model.Response&lt;System.Collections.Generic.IEnumerable&lt;TData&gt;&gt;" />
+        </member>
+        <member name="P:Cowboy.Stoke.AspNetCore.Model.ResponsePaged`1.PageIndex">
+            <summary>
+            Gets or sets the index of the page.
+            </summary>
+            <value>The index of the page.</value>
+        </member>
+        <member name="P:Cowboy.Stoke.AspNetCore.Model.ResponsePaged`1.PageSize">
+            <summary>
+            Gets or sets the size of the page.
+            </summary>
+            <value>The size of the page.</value>
+        </member>
+        <member name="P:Cowboy.Stoke.AspNetCore.Model.ResponsePaged`1.TotalCount">
+            <summary>
+            Gets or sets the total count.
+            </summary>
+            <value>The total count.</value>
+        </member>
+        <member name="P:Cowboy.Stoke.AspNetCore.Model.ResponsePaged`1.TotalPage">
+            <summary>
+            Gets or sets the total page.
+            </summary>
+            <value>The total page.</value>
+        </member>
+        <member name="T:Cowboy.Stoke.AspNetCore.Model.Response`1">
+            <summary>
+            Class Response.
+            </summary>
+            <typeparam name="TData">The type of the t data.</typeparam>
+            <seealso cref="T:Cowboy.Stoke.AspNetCore.Model.Response" />
+        </member>
+        <member name="P:Cowboy.Stoke.AspNetCore.Model.Response`1.Data">
+            <summary>
+            Gets or sets the data.
+            </summary>
+            <value>The data.</value>
+        </member>
+        <member name="T:Cowboy.TravelShop.Model.StrokeContext">
+            <summary>
+            There are no comments for StrokeContext class in the schema.
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.StrokeContext.#ctor">
+            <summary>
+            There are no comments for StrokeContext constructor in the schema.
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.StrokeContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{Cowboy.TravelShop.Model.StrokeContext})">
+            <summary>
+            There are no comments for StrokeContext constructor in the schema.
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.StrokeContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <summary>
+            There are no comments for OnConfiguring(DbContextOptionsBuilder optionsBuilder) method in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeContext.Users">
+            <summary>
+            There are no comments for Users property in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeContext.allies">
+            <summary>
+            There are no comments for allies property in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeContext.UserSources">
+            <summary>
+            There are no comments for UserSources property in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeContext.PaySecurities">
+            <summary>
+            There are no comments for PaySecurities property in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeContext.UserandAllies">
+            <summary>
+            There are no comments for UserandAllies property in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeContext.UserandUsers">
+            <summary>
+            There are no comments for UserandUsers property in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeContext.ThirdPartyLogins">
+            <summary>
+            There are no comments for ThirdPartyLogins property in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeContext.Strokes">
+            <summary>
+            There are no comments for Strokes property in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeContext.StrokeCategories">
+            <summary>
+            There are no comments for StrokeCategories property in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeContext.StrokeCollects">
+            <summary>
+            There are no comments for StrokeCollects property in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeContext.StrokeShares">
+            <summary>
+            There are no comments for StrokeShares property in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeContext.Orders">
+            <summary>
+            There are no comments for Orders property in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeContext.ShoppingCarts">
+            <summary>
+            There are no comments for ShoppingCarts property in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeContext.Cities">
+            <summary>
+            There are no comments for Cities property in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeContext.Payments">
+            <summary>
+            There are no comments for Payments property in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeContext.PaymentCallbacks">
+            <summary>
+            There are no comments for PaymentCallbacks property in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeContext.Ad">
+            <summary>
+            There are no comments for Ad property in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeContext.SmsSends">
+            <summary>
+            There are no comments for SmsSends property in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeContext.Customizes">
+            <summary>
+            There are no comments for Customizes property in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeContext.VerificationCodes">
+            <summary>
+            There are no comments for VerificationCodes property in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeContext.GroupSendings">
+            <summary>
+            There are no comments for GroupSendings property in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeContext.Managers">
+            <summary>
+            There are no comments for Managers property in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeContext.UserShares">
+            <summary>
+            There are no comments for UserShares property in the schema.
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.StrokeContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            There are no comments for OnModelCreating in the schema.
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.StrokeContext.UserMapping(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            There are no comments for UserMapping in the schema.
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.StrokeContext.alliesMapping(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            There are no comments for alliesMapping in the schema.
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.StrokeContext.UserSourceMapping(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            There are no comments for UserSourceMapping in the schema.
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.StrokeContext.PaySecurityMapping(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            There are no comments for PaySecurityMapping in the schema.
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.StrokeContext.UserandAlliesMapping(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            There are no comments for UserandAlliesMapping in the schema.
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.StrokeContext.UserandUserMapping(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            There are no comments for UserandUserMapping in the schema.
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.StrokeContext.ThirdPartyLoginMapping(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            There are no comments for ThirdPartyLoginMapping in the schema.
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.StrokeContext.StrokeMapping(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            There are no comments for StrokeMapping in the schema.
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.StrokeContext.StrokeCategoryMapping(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            There are no comments for StrokeCategoryMapping in the schema.
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.StrokeContext.StrokeCollectMapping(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            There are no comments for StrokeCollectMapping in the schema.
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.StrokeContext.StrokeShareMapping(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            There are no comments for StrokeShareMapping in the schema.
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.StrokeContext.OrderMapping(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            There are no comments for OrderMapping in the schema.
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.StrokeContext.ShoppingCartMapping(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            There are no comments for ShoppingCartMapping in the schema.
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.StrokeContext.CityMapping(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            There are no comments for CityMapping in the schema.
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.StrokeContext.PaymentMapping(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            There are no comments for PaymentMapping in the schema.
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.StrokeContext.PaymentCallbackMapping(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            There are no comments for PaymentCallbackMapping in the schema.
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.StrokeContext.AdMapping(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            There are no comments for AdMapping in the schema.
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.StrokeContext.SmsSendMapping(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            There are no comments for SmsSendMapping in the schema.
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.StrokeContext.CustomizeMapping(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            There are no comments for CustomizeMapping in the schema.
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.StrokeContext.VerificationCodeMapping(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            There are no comments for VerificationCodeMapping in the schema.
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.StrokeContext.GroupSendingMapping(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            There are no comments for GroupSendingMapping in the schema.
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.StrokeContext.ManagerMapping(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            There are no comments for ManagerMapping in the schema.
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.StrokeContext.UserShareMapping(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            There are no comments for UserShareMapping in the schema.
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.StrokeContext.RelationshipsMapping(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            There are no comments for RelationshipsMapping in the schema.
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.StrokeContext.HasChanges">
+            <summary>
+            There are no comments for HasChanges property in the schema.
+            </summary>
+        </member>
+        <member name="T:Cowboy.TravelShop.Model.User">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.User.#ctor">
+            <summary>
+            There are no comments for User constructor in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.User.Id">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.User.Cphone">
+            <summary>
+            登陆手机号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.User.PassWord">
+            <summary>
+            登陆密码 
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.User.UserName">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.User.IsActive">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.User.Age">
+            <summary>
+            年龄
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.User.Sex">
+            <summary>
+            性别 
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.User.CityId">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.User.WeChatNo">
+            <summary>
+            微信号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.User.ImageUrl">
+            <summary>
+            头像地址
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.User.ImageThumb">
+            <summary>
+            头像缩略图
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.User.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.User.PaySecurity">
+            <summary>
+            There are no comments for PaySecurity in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.User.UserSource">
+            <summary>
+            There are no comments for UserSource in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.User.ShoppingCarts">
+            <summary>
+            There are no comments for ShoppingCarts in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.User.UserShares">
+            <summary>
+            There are no comments for UserShares in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.User.UserandAllies">
+            <summary>
+            There are no comments for UserandAllies in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.User.Orders">
+            <summary>
+            There are no comments for Orders in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.User.City">
+            <summary>
+            There are no comments for City in the schema.
+            </summary>
+        </member>
+        <member name="T:Cowboy.TravelShop.Model.allies">
+            <summary>
+            友商
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.allies.#ctor">
+            <summary>
+            There are no comments for allies constructor in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.allies.Id">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.allies.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.allies.IsActive">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.allies.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.allies.UserandAllies">
+            <summary>
+            There are no comments for UserandAllies in the schema.
+            </summary>
+        </member>
+        <member name="T:Cowboy.TravelShop.Model.UserSource">
+            <summary>
+            用户来源信息
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.UserSource.#ctor">
+            <summary>
+            There are no comments for UserSource constructor in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.UserSource.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.UserSource.From">
+            <summary>
+            用户来源类型
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.UserSource.Adress">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.UserSource.City">
+            <summary>
+            城市 
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.UserSource.CityId">
+            <summary>
+            城市代码 
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.UserSource.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.UserSource.User">
+            <summary>
+            There are no comments for User in the schema.
+            </summary>
+        </member>
+        <member name="T:Cowboy.TravelShop.Model.PaySecurity">
+            <summary>
+            支付安全信息
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.PaySecurity.#ctor">
+            <summary>
+            There are no comments for PaySecurity constructor in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.PaySecurity.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.PaySecurity.PayPassWord">
+            <summary>
+            支付密码 
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.PaySecurity.CreateBy">
+            <summary>
+            创建人员 
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.PaySecurity.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.PaySecurity.UpdateBy">
+            <summary>
+            更新人员
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.PaySecurity.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.PaySecurity.User">
+            <summary>
+            There are no comments for User in the schema.
+            </summary>
+        </member>
+        <member name="T:Cowboy.TravelShop.Model.UserandAllies">
+            <summary>
+            用户与友商关系
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.UserandAllies.#ctor">
+            <summary>
+            There are no comments for UserandAllies constructor in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.UserandAllies.Id">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.UserandAllies.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.UserandAllies.AlliesId">
+            <summary>
+            友商编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.UserandAllies.IsActive">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.UserandAllies.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.UserandAllies.allies">
+            <summary>
+            There are no comments for allies in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.UserandAllies.User">
+            <summary>
+            There are no comments for User in the schema.
+            </summary>
+        </member>
+        <member name="T:Cowboy.TravelShop.Model.UserandUser">
+            <summary>
+            用户与用户关系
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.UserandUser.#ctor">
+            <summary>
+            There are no comments for UserandUser constructor in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.UserandUser.Id">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.UserandUser.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.UserandUser.InvitedUser">
+            <summary>
+            邀请用户编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.UserandUser.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.UserandUser.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:Cowboy.TravelShop.Model.ThirdPartyLogin">
+            <summary>
+            第三方登陆
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.ThirdPartyLogin.#ctor">
+            <summary>
+            There are no comments for ThirdPartyLogin constructor in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.ThirdPartyLogin.Id">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.ThirdPartyLogin.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.ThirdPartyLogin.OpenId">
+            <summary>
+            There are no comments for OpenId in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.ThirdPartyLogin.Sex">
+            <summary>
+            性别 
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.ThirdPartyLogin.Age">
+            <summary>
+            年龄
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.ThirdPartyLogin.Adress">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.ThirdPartyLogin.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:Cowboy.TravelShop.Model.Stroke">
+            <summary>
+            行程
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.Stroke.#ctor">
+            <summary>
+            There are no comments for Stroke constructor in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Stroke.Id">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Stroke.Title">
+            <summary>
+            名称 
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Stroke.Detail">
+            <summary>
+            详情
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Stroke.SearchKey">
+            <summary>
+            搜索关键字
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Stroke.CategoryId">
+            <summary>
+            种类编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Stroke.ImageUrl">
+            <summary>
+            封面图片地址
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Stroke.ImageThumb">
+            <summary>
+            封面图片缩略图
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Stroke.NumberDay">
+            <summary>
+            游玩天数
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Stroke.IsActive">
+            <summary>
+            There are no comments for IsActive in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Stroke.IsRecommend">
+            <summary>
+            是否为推荐
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Stroke.IsHot">
+            <summary>
+            是否热门
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Stroke.IsNew">
+            <summary>
+            是否新品
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Stroke.City">
+            <summary>
+            出发城市
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Stroke.Price">
+            <summary>
+            标准价格
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Stroke.Destination">
+            <summary>
+            目的地
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Stroke.SpecialPrice">
+            <summary>
+            优惠价格
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Stroke.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Stroke.StokeShare">
+            <summary>
+            There are no comments for StokeShare in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Stroke.StokeCollects">
+            <summary>
+            There are no comments for StokeCollects in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Stroke.StokeCategory">
+            <summary>
+            There are no comments for StokeCategory in the schema.
+            </summary>
+        </member>
+        <member name="T:Cowboy.TravelShop.Model.StrokeCategory">
+            <summary>
+            行程种类
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.StrokeCategory.#ctor">
+            <summary>
+            There are no comments for StrokeCategory constructor in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeCategory.Id">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeCategory.CategoryName">
+            <summary>
+            种类名称
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeCategory.IsActive">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeCategory.CreateTime">
+            <summary>
+            创建时间 
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeCategory.Stokes">
+            <summary>
+            There are no comments for Stokes in the schema.
+            </summary>
+        </member>
+        <member name="T:Cowboy.TravelShop.Model.StrokeCollect">
+            <summary>
+            行程收藏
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.StrokeCollect.#ctor">
+            <summary>
+            There are no comments for StrokeCollect constructor in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeCollect.Id">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeCollect.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeCollect.IsActive">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeCollect.StrokeId">
+            <summary>
+            路程编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeCollect.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeCollect.Stoke">
+            <summary>
+            There are no comments for Stoke in the schema.
+            </summary>
+        </member>
+        <member name="T:Cowboy.TravelShop.Model.StrokeShare">
+            <summary>
+            路程分享 
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.StrokeShare.#ctor">
+            <summary>
+            There are no comments for StrokeShare constructor in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeShare.Id">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeShare.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeShare.StrokeId">
+            <summary>
+            行程编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeShare.ShareNumber">
+            <summary>
+            分享数量
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeShare.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeShare.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.StrokeShare.Stoke">
+            <summary>
+            There are no comments for Stoke in the schema.
+            </summary>
+        </member>
+        <member name="T:Cowboy.TravelShop.Model.Order">
+            <summary>
+            订单
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.Order.#ctor">
+            <summary>
+            There are no comments for Order constructor in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Order.Id">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Order.OrderNo">
+            <summary>
+            订单单号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Order.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Order.StrokeId">
+            <summary>
+            There are no comments for StrokeId in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Order.Title">
+            <summary>
+            There are no comments for Title in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Order.OrderStatus">
+            <summary>
+            订单状态
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Order.Price">
+            <summary>
+            单价
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Order.TotalCount">
+            <summary>
+            订单数量
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Order.TotalAmount">
+            <summary>
+            订单总金额
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Order.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Order.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Order.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Order.Payment">
+            <summary>
+            There are no comments for Payment in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Order.User">
+            <summary>
+            There are no comments for User in the schema.
+            </summary>
+        </member>
+        <member name="T:Cowboy.TravelShop.Model.ShoppingCart">
+            <summary>
+            购物车
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.ShoppingCart.#ctor">
+            <summary>
+            There are no comments for ShoppingCart constructor in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.ShoppingCart.Id">
+            <summary>
+            编号 
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.ShoppingCart.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.ShoppingCart.StrokeId">
+            <summary>
+            行程编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.ShoppingCart.Quantity">
+            <summary>
+            数量
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.ShoppingCart.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.ShoppingCart.CreateBy">
+            <summary>
+            创建人员
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.ShoppingCart.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.ShoppingCart.User">
+            <summary>
+            There are no comments for User in the schema.
+            </summary>
+        </member>
+        <member name="T:Cowboy.TravelShop.Model.City">
+            <summary>
+            城市
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.City.#ctor">
+            <summary>
+            There are no comments for City constructor in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.City.Id">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.City.IsOpen">
+            <summary>
+            是否开放
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.City.IsHot">
+            <summary>
+            是否热门
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.City.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.City.ParentId">
+            <summary>
+            父级编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.City.SimpleSpell">
+            <summary>
+            拼音简写
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.City.FullSpell">
+            <summary>
+            拼音全写
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.City.CreateBy">
+            <summary>
+            创建人员
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.City.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.City.Users">
+            <summary>
+            There are no comments for Users in the schema.
+            </summary>
+        </member>
+        <member name="T:Cowboy.TravelShop.Model.Payment">
+            <summary>
+            支付信息
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.Payment.#ctor">
+            <summary>
+            There are no comments for Payment constructor in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Payment.Id">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Payment.OrderIds">
+            <summary>
+            订单编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Payment.PayEnvironment">
+            <summary>
+            支付环境
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Payment.PaymentType">
+            <summary>
+            支付方式
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Payment.Status">
+            <summary>
+            支付状态
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Payment.CreateBy">
+            <summary>
+            创建人员
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Payment.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Payment.UpdateBy">
+            <summary>
+            更新人员
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Payment.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Payment.PaymentCallback">
+            <summary>
+            There are no comments for PaymentCallback in the schema.
+            </summary>
+        </member>
+        <member name="T:Cowboy.TravelShop.Model.PaymentCallback">
+            <summary>
+            支付回调信息
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.PaymentCallback.#ctor">
+            <summary>
+            There are no comments for PaymentCallback constructor in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.PaymentCallback.Id">
+            <summary>
+             编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.PaymentCallback.PaymentId">
+            <summary>
+            支付编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.PaymentCallback.OutTradeStatus">
+            <summary>
+            支付状态
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.PaymentCallback.TradeNo">
+            <summary>
+            第三方交易凭证号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.PaymentCallback.OutTradeParameter">
+            <summary>
+            支付回调详细信息
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.PaymentCallback.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.PaymentCallback.Payment">
+            <summary>
+            There are no comments for Payment in the schema.
+            </summary>
+        </member>
+        <member name="T:Cowboy.TravelShop.Model.Ad">
+            <summary>
+            广告
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.Ad.#ctor">
+            <summary>
+            There are no comments for Ad constructor in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Ad.Id">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Ad.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Ad.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Ad.StrokeId">
+            <summary>
+            行程编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Ad.IsActive">
+            <summary>
+            启用状态
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Ad.Link">
+            <summary>
+            链接
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Ad.CityId">
+            <summary>
+            城市编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Ad.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Ad.ImageUrl">
+            <summary>
+            图片地址
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Ad.ImageThumb">
+            <summary>
+            缩略图
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Ad.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:Cowboy.TravelShop.Model.SmsSend">
+            <summary>
+            验证码短信
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.SmsSend.#ctor">
+            <summary>
+            There are no comments for SmsSend constructor in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.SmsSend.Id">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.SmsSend.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.SmsSend.Cphone">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.SmsSend.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.SmsSend.Code">
+            <summary>
+            验证码 
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.SmsSend.IsSuccess">
+            <summary>
+            是否发送成功
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.SmsSend.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:Cowboy.TravelShop.Model.Customize">
+            <summary>
+            定制 
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.Customize.#ctor">
+            <summary>
+            There are no comments for Customize constructor in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Customize.Id">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Customize.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Customize.StartCity">
+            <summary>
+            出发城市
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Customize.Destination">
+            <summary>
+            目的地 
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Customize.CustomizeNo">
+            <summary>
+            There are no comments for CustomizeNo in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Customize.Cphone">
+            <summary>
+            手机号码 
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Customize.Status">
+            <summary>
+            There are no comments for Status in the schema.
+            </summary>
+            <remark>
+            定制状态
+            </remark>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Customize.Adult">
+            <summary>
+            成人人数
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Customize.Children">
+            <summary>
+            儿童人数
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Customize.TotalAmount">
+            <summary>
+            定制总价格
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Customize.Name">
+            <summary>
+            预定人
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Customize.Budget">
+            <summary>
+            人均预算
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Customize.NumberDay">
+            <summary>
+            游玩天数
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Customize.StartDate">
+            <summary>
+            开始日期
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Customize.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Customize.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Customize.UpdateTime">
+            <summary>
+            There are no comments for UpdateTime in the schema.
+            </summary>
+        </member>
+        <member name="T:Cowboy.TravelShop.Model.VerificationCode">
+            <summary>
+            验证码记录信息 
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.VerificationCode.#ctor">
+            <summary>
+            There are no comments for VerificationCode constructor in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.VerificationCode.Id">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.VerificationCode.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.VerificationCode.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.VerificationCode.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.VerificationCode.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:Cowboy.TravelShop.Model.GroupSending">
+            <summary>
+            群发短信
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.GroupSending.#ctor">
+            <summary>
+            There are no comments for GroupSending constructor in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.GroupSending.Id">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.GroupSending.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.GroupSending.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.GroupSending.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.GroupSending.Quantity">
+            <summary>
+            数量
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.GroupSending.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:Cowboy.TravelShop.Model.Manager">
+            <summary>
+            管理员
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.Manager.#ctor">
+            <summary>
+            There are no comments for Manager constructor in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Manager.Id">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Manager.Cphone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Manager.PassWord">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Manager.Name">
+            <summary>
+            管理员名称
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Manager.ImageUrl">
+            <summary>
+            头像地址
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Manager.ImageThumb">
+            <summary>
+            头像缩略图
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.Manager.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:Cowboy.TravelShop.Model.UserShare">
+            <summary>
+            用户分享
+            </summary>
+        </member>
+        <member name="M:Cowboy.TravelShop.Model.UserShare.#ctor">
+            <summary>
+            There are no comments for UserShare constructor in the schema.
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.UserShare.Id">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.UserShare.UserId">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.UserShare.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.UserShare.ImageUrl">
+            <summary>
+            分享图片地址
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.UserShare.ImageThumb">
+            <summary>
+            分享图片缩略图
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.UserShare.CreateBy">
+            <summary>
+            创建人员
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.UserShare.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Cowboy.TravelShop.Model.UserShare.User">
+            <summary>
+            There are no comments for User in the schema.
+            </summary>
+        </member>
+        <member name="T:Cowboy.TravelShop.Model.UserFrom">
+            <summary>
+            用户来源类型
+            </summary>
+        </member>
+        <member name="F:Cowboy.TravelShop.Model.UserFrom.SeraCh">
+            <summary>
+            搜索而来
+            </summary>
+        </member>
+        <member name="F:Cowboy.TravelShop.Model.UserFrom.UserShare">
+            <summary>
+            用户分享
+            </summary>
+        </member>
+        <member name="F:Cowboy.TravelShop.Model.UserFrom.AlliesShare">
+            <summary>
+            友商分享
+            </summary>
+        </member>
+        <member name="F:Cowboy.TravelShop.Model.UserFrom.Ad">
+            <summary>
+            广告
+            </summary>
+        </member>
+        <member name="T:Cowboy.TravelShop.Model.OrderStatus">
+            <summary>
+            订单状态
+            </summary>
+        </member>
+        <member name="F:Cowboy.TravelShop.Model.OrderStatus.Cancel">
+            <summary>
+            取消
+            </summary>
+        </member>
+        <member name="F:Cowboy.TravelShop.Model.OrderStatus.NoPaid">
+            <summary>
+            未支付
+            </summary>
+        </member>
+        <member name="F:Cowboy.TravelShop.Model.OrderStatus.Paid">
+            <summary>
+            已支付 
+            </summary>
+        </member>
+        <member name="F:Cowboy.TravelShop.Model.OrderStatus.Agree">
+            <summary>
+            同意
+            </summary>
+        </member>
+        <member name="F:Cowboy.TravelShop.Model.OrderStatus.Complete">
+            <summary>
+            完成
+            </summary>
+        </member>
+        <member name="T:Cowboy.TravelShop.Model.LoginType">
+            <summary>
+            登陆方式
+            </summary>
+        </member>
+        <member name="F:Cowboy.TravelShop.Model.LoginType.WeChat">
+            <summary>
+            微信
+            </summary>
+        </member>
+        <member name="F:Cowboy.TravelShop.Model.LoginType.QQ">
+            <summary>
+            QQ
+            </summary>
+        </member>
+        <member name="F:Cowboy.TravelShop.Model.LoginType.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="T:Cowboy.TravelShop.Model.ADType">
+            <summary>
+            广告类型
+            </summary>
+        </member>
+        <member name="F:Cowboy.TravelShop.Model.ADType.Banner">
+            <summary>
+            Banner
+            </summary>
+        </member>
+        <member name="F:Cowboy.TravelShop.Model.ADType.Pages">
+            <summary>
+            页面广告
+            </summary>
+        </member>
+        <member name="T:Cowboy.TravelShop.Model.PaymentType">
+            <summary>
+            There are no comments for Cowboy.TravelShop.Model.PaymentType in the schema.
+            </summary>
+        </member>
+        <member name="F:Cowboy.TravelShop.Model.PaymentType.WeChat">
+            <summary>
+            There are no comments for PaymentType.WeChat in the schema.
+            </summary>
+        </member>
+        <member name="F:Cowboy.TravelShop.Model.PaymentType.AliPay">
+            <summary>
+            There are no comments for PaymentType.AliPay in the schema.
+            </summary>
+        </member>
+        <member name="T:Cowboy.TravelShop.Model.CustomizeStatus">
+            <summary>
+            定制状态
+            </summary>
+        </member>
+        <member name="F:Cowboy.TravelShop.Model.CustomizeStatus.Cancel">
+            <summary>
+            取消
+            </summary>
+        </member>
+        <member name="F:Cowboy.TravelShop.Model.CustomizeStatus.Await">
+            <summary>
+            等待同意定制
+            </summary>
+        </member>
+        <member name="F:Cowboy.TravelShop.Model.CustomizeStatus.Agree">
+            <summary>
+            同意定制
+            </summary>
+        </member>
+        <member name="F:Cowboy.TravelShop.Model.CustomizeStatus.NoPaid">
+            <summary>
+            未支付
+            </summary>
+        </member>
+        <member name="F:Cowboy.TravelShop.Model.CustomizeStatus.Paid">
+            <summary>
+            已支付
+            </summary>
+        </member>
+        <member name="F:Cowboy.TravelShop.Model.CustomizeStatus.Complete">
+            <summary>
+            完成
+            </summary>
+        </member>
+    </members>
+</doc>

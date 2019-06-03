@@ -1,0 +1,1546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<efcore context-namespace="Cowboy.TravelShop.Model" namespace="Cowboy.TravelShop.Model" p1:name="StrokeContext" p1:Guid="70abec65-4efd-4b6a-9971-08eaacae650e" xmlns:p1="http://devart.com/schemas/EntityDeveloper/1.0">
+  <class name="$EnumTypes">
+    <EnumType Name="UserFrom" class="UserFrom" p1:Guid="7c889437-d1c3-4f72-a718-4ad8f7a1a03e">
+      <Documentation>
+        <Summary>用户来源类型</Summary>
+      </Documentation>
+      <Member Name="Search" Value="0" p1:Guid="b74e4890-15c8-4c64-9488-5e59faa005b3">
+        <Documentation>
+          <Summary>搜索而来</Summary>
+        </Documentation>
+      </Member>
+      <Member Name="UserShare" Value="1" p1:Guid="280975bd-6e10-420e-b932-b77ee29e75e3">
+        <Documentation>
+          <Summary>用户分享</Summary>
+        </Documentation>
+      </Member>
+      <Member Name="AlliesShare" Value="2" p1:Guid="e9733da2-befe-49e6-abb7-77e223f74c94">
+        <Documentation>
+          <Summary>友商分享</Summary>
+        </Documentation>
+      </Member>
+      <Member Name="Ad" Value="3" p1:Guid="ebe38c75-c03a-4de7-99ce-3c6f757ac31e">
+        <Documentation>
+          <Summary>广告</Summary>
+        </Documentation>
+      </Member>
+      <Member Name="Other" Value="4" p1:Guid="91ddaa9d-e51f-42d9-844b-71bf24d9baa6" />
+    </EnumType>
+    <EnumType Name="OrderStatus" class="OrderStatus" p1:Guid="547c9969-7ac2-4e5d-8b35-4715e80f5503">
+      <Documentation>
+        <Summary>订单状态</Summary>
+      </Documentation>
+      <Member Name="Cancel" Value="-1" p1:Guid="ccf3521a-db08-49a9-a6cd-e3ae8cc2a873">
+        <Documentation>
+          <Summary>取消</Summary>
+        </Documentation>
+      </Member>
+      <Member Name="NoPaid" Value="0" p1:Guid="96dfc86a-27c9-4a9e-9206-d8cd44be2a7f">
+        <Documentation>
+          <Summary>未支付</Summary>
+        </Documentation>
+      </Member>
+      <Member Name="Paid" Value="1" p1:Guid="63ecf21f-68bd-48d2-8a90-2137630898cf">
+        <Documentation>
+          <Summary>已支付 </Summary>
+        </Documentation>
+      </Member>
+      <Member Name="Agree" Value="2" p1:Guid="bbc08024-4e0c-4d28-9453-19156b5b5f51">
+        <Documentation>
+          <Summary>同意</Summary>
+        </Documentation>
+      </Member>
+      <Member Name="Complete" Value="3" p1:Guid="76c20304-4201-4898-baa5-6ac8560ea108">
+        <Documentation>
+          <Summary>完成</Summary>
+        </Documentation>
+      </Member>
+    </EnumType>
+    <EnumType Name="LoginType" UnderlyingType="Byte" class="LoginType" p1:Guid="04a70f8a-0bb4-4900-903c-47a9bac01ebd">
+      <Documentation>
+        <Summary>登陆方式</Summary>
+      </Documentation>
+      <Member Name="WeChat" Value="1" p1:Guid="f03b42e6-105e-49dd-abc2-a5db634e172e">
+        <Documentation>
+          <Summary>微信</Summary>
+        </Documentation>
+      </Member>
+      <Member Name="QQ" Value="2" p1:Guid="44e4e666-47dc-4d47-ac51-f177af6eea0c">
+        <Documentation>
+          <Summary>QQ</Summary>
+        </Documentation>
+      </Member>
+      <Member Name="Email" Value="3" p1:Guid="af9dc1a8-bc91-4c8e-b400-43d697ae2749">
+        <Documentation>
+          <Summary>邮箱</Summary>
+        </Documentation>
+      </Member>
+    </EnumType>
+    <EnumType Name="ADType" class="ADType" p1:Guid="61b9b89c-5214-4b76-a43f-ccdc2b2b7e2f">
+      <Documentation>
+        <Summary>广告类型</Summary>
+      </Documentation>
+      <Member Name="Banner" Value="1" p1:Guid="e38b08cb-005b-4778-93c3-38c37715adff">
+        <Documentation>
+          <Summary>Banner</Summary>
+        </Documentation>
+      </Member>
+      <Member Name="Pages" Value="2" p1:Guid="a24a99f9-f80a-4bce-b297-2ca9f95002d1">
+        <Documentation>
+          <Summary>页面广告</Summary>
+        </Documentation>
+      </Member>
+    </EnumType>
+    <EnumType Name="PaymentType" class="PaymentType" p1:Guid="ce68a36e-15e8-49e1-bbb3-5566a2426ff1">
+      <Member Name="WeChat" Value="1" p1:Guid="d3ab9f00-e266-4441-8823-a756374c6740" />
+      <Member Name="AliPay" Value="2" p1:Guid="3aa8d861-1fb2-4913-9eda-facc4790648b" />
+    </EnumType>
+    <EnumType Name="CustomizeStatus" class="CustomizeStatus" p1:Guid="1febce18-e170-47c7-a5c9-24663cfaf246">
+      <Documentation>
+        <Summary>定制状态</Summary>
+      </Documentation>
+      <Member Name="Cancel" Value="-1" p1:Guid="b2048cfe-a8ea-4907-bead-bd243df61814">
+        <Documentation>
+          <Summary>取消</Summary>
+        </Documentation>
+      </Member>
+      <Member Name="Await" Value="0" p1:Guid="276dbc35-8716-4712-adab-818881e08d13">
+        <Documentation>
+          <Summary>等待同意定制</Summary>
+        </Documentation>
+      </Member>
+      <Member Name="Agree" Value="1" p1:Guid="eea2bc08-ffc4-472b-904d-7e17db2a2a1d">
+        <Documentation>
+          <Summary>同意定制</Summary>
+        </Documentation>
+      </Member>
+      <Member Name="NoPaid" Value="2" p1:Guid="3fcdb7e1-f929-4c97-b9b3-c5f2d31f7fff">
+        <Documentation>
+          <Summary>未支付</Summary>
+        </Documentation>
+      </Member>
+      <Member Name="Paid" Value="3" p1:Guid="7d62ddaa-1e78-4e04-bf19-eda83f38db80">
+        <Documentation>
+          <Summary>已支付</Summary>
+        </Documentation>
+      </Member>
+      <Member Name="Complete" Value="4" p1:Guid="6dace3c5-ee3c-455a-8070-c1e322f764c0">
+        <Documentation>
+          <Summary>完成</Summary>
+        </Documentation>
+      </Member>
+    </EnumType>
+  </class>
+  <class name="User" entity-set="Users" p1:Guid="e19303a5-a3a3-44e7-a5d5-6e9508f444c9">
+    <Documentation>
+      <Summary>用户</Summary>
+    </Documentation>
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="cca920f5-f400-42c5-933b-243fcb6f2147">
+      <Documentation>
+        <Summary>编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </id>
+    <property name="Cphone" type="String" p1:nullable="True" p1:ValidateMaxLength="15" p1:ValidateRequired="false" p1:Guid="fb764375-1a17-4b5a-bd6a-173ca4b3cc4d">
+      <Documentation>
+        <Summary>登陆手机号</Summary>
+      </Documentation>
+      <column name="" default="''" length="15" />
+    </property>
+    <property name="PassWord" type="String" p1:nullable="True" p1:ValidateMaxLength="85" p1:ValidateRequired="false" p1:Guid="6e85566e-71dd-4335-83f9-159baabc0439">
+      <Documentation>
+        <Summary>登陆密码 </Summary>
+      </Documentation>
+      <column name="" default="''" length="85" />
+    </property>
+    <property name="UserName" type="String" p1:nullable="True" p1:ValidateMaxLength="80" p1:ValidateRequired="false" p1:Guid="3fe8671b-deba-4e54-bd7b-df9c230a8433">
+      <Documentation>
+        <Summary>用户名称</Summary>
+      </Documentation>
+      <column name="" default="''" length="80" />
+    </property>
+    <property name="IsActive" type="Boolean" p1:ValidateRequired="true" p1:Guid="dd4920a4-dcf9-49eb-8df0-60a8ce43eb9f">
+      <Documentation>
+        <Summary>是否启用</Summary>
+      </Documentation>
+      <column name="" default="1" />
+    </property>
+    <property name="Age" type="Int16" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="409dba7d-c750-4253-ae15-d37bc231f15f">
+      <Documentation>
+        <Summary>年龄</Summary>
+      </Documentation>
+      <column name="" default="22" />
+    </property>
+    <property name="Sex" type="Boolean" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="6abc0e77-89c3-4fc7-bab2-0bd691a620ea">
+      <Documentation>
+        <Summary>性别 </Summary>
+      </Documentation>
+      <column name="" default="1" />
+    </property>
+    <property name="CityId" type="Int64" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="03206002-2602-4a3e-9f5c-6e214dd1385f">
+      <Documentation>
+        <Summary>城市代码</Summary>
+      </Documentation>
+      <column name="" default="860571" precision="18" scale="0" />
+    </property>
+    <property name="WeChatNo" type="String" p1:nullable="True" p1:ValidateMaxLength="100" p1:ValidateRequired="false" p1:Guid="fc2dc7a4-078b-443d-b8ff-cad06493cbe6">
+      <Documentation>
+        <Summary>微信号</Summary>
+      </Documentation>
+      <column name="" default="''" length="100" />
+    </property>
+    <property name="ImageUrl" type="String" p1:nullable="True" p1:ValidateMaxLength="200" p1:ValidateRequired="false" p1:Guid="d76ae93e-3de0-456f-bce5-ae95fec291a2">
+      <Documentation>
+        <Summary>头像地址</Summary>
+      </Documentation>
+      <column name="" default="''" length="200" />
+    </property>
+    <property name="ImageThumb" type="String" p1:nullable="True" p1:ValidateMaxLength="200" p1:ValidateRequired="false" p1:Guid="cb50aa83-0380-4fe8-b719-e008b63fbc41">
+      <Documentation>
+        <Summary>头像缩略图</Summary>
+      </Documentation>
+      <column name="" default="''" length="200" />
+    </property>
+    <property name="ShareImage" type="String" p1:nullable="True" p1:ValidateMaxLength="85" p1:ValidateRequired="false" p1:Guid="5a3f3c64-abb7-4548-9d26-50ae165a5374">
+      <Documentation>
+        <Summary> 分享图片</Summary>
+      </Documentation>
+      <column name="" default="&quot;&quot;" length="85" />
+    </property>
+    <property name="CreateTime" type="DateTime" p1:ValidateRequired="true" p1:Guid="bd87eefd-0a92-4b12-8927-890b5553f1e3">
+      <Documentation>
+        <Summary>创建时间</Summary>
+      </Documentation>
+      <column name="" default="current_timestamp" />
+    </property>
+  </class>
+  <class name="allies" entity-set="allies" table="allies" p1:Guid="d760cc33-9dcd-4837-85f9-ab58da5b3674">
+    <Documentation>
+      <Summary>友商</Summary>
+    </Documentation>
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="73256b3b-82d5-4182-8639-5a5377527970">
+      <Documentation>
+        <Summary>编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </id>
+    <property name="Name" type="String" p1:ValidateMaxLength="25" p1:ValidateRequired="true" p1:Guid="5bc7ba54-baa1-4963-adae-949bfc520c7f">
+      <Documentation>
+        <Summary>名称</Summary>
+      </Documentation>
+      <column name="" default="''" length="25" />
+    </property>
+    <property name="IsActive" type="Boolean" p1:ValidateRequired="true" p1:Guid="9004bbae-8ecf-4ef1-adfc-548d1719436b">
+      <Documentation>
+        <Summary>是否启用</Summary>
+      </Documentation>
+      <column name="" default="1" />
+    </property>
+    <property name="ShareImage" type="String" p1:ValidateMaxLength="85" p1:ValidateRequired="true" p1:Guid="07389438-4c19-4b6f-9b37-40d53e139b5a">
+      <Documentation>
+        <Summary>分享图片</Summary>
+      </Documentation>
+      <column name="" default="&quot;&quot;" length="85" />
+    </property>
+    <property name="CreateTime" type="DateTime" p1:ValidateRequired="true" p1:Guid="db41156b-04d6-481f-a019-801b5189ecf7">
+      <Documentation>
+        <Summary>创建时间</Summary>
+      </Documentation>
+      <column name="" default="current_timeStamp" />
+    </property>
+    <property name="UpdateTime" type="DateTime" p1:ValidateRequired="true" p1:Guid="f81863fc-895a-4c1a-b8e6-29d31293a70b">
+      <Documentation>
+        <Summary>更新时间 </Summary>
+      </Documentation>
+      <column name="" default="current_timeStamp" />
+    </property>
+  </class>
+  <class name="UserSource" entity-set="UserSources" table="User_Source" p1:Guid="d105213d-ec50-4062-949f-08151def838f">
+    <Documentation>
+      <Summary>用户来源信息</Summary>
+    </Documentation>
+    <id name="UserId" type="Int64" p1:ValidateRequired="true" p1:Guid="e2c06d0d-2e01-4bc6-8702-03d8a6f3ec70">
+      <Documentation>
+        <Summary>用户编号</Summary>
+      </Documentation>
+      <column name="" default="0" precision="18" scale="0" />
+    </id>
+    <property name="From" type="Cowboy.TravelShop.Model.UserFrom" p1:ValidateRequired="true" p1:Guid="b7413a70-1669-4beb-95fd-ca2fbce636ad">
+      <Documentation>
+        <Summary>用户来源类型</Summary>
+      </Documentation>
+      <column name="" default="0" />
+    </property>
+    <property name="Adress" type="String" p1:ValidateMaxLength="50" p1:ValidateRequired="true" p1:Guid="f4a6c01b-2364-4144-8648-4d28adf9c99c">
+      <Documentation>
+        <Summary>地址</Summary>
+      </Documentation>
+      <column name="" default="''" length="50" />
+    </property>
+    <property name="City" type="String" p1:ValidateMaxLength="25" p1:ValidateRequired="true" p1:Guid="1e26d32d-6f39-4a2a-b545-ec424d8f0002">
+      <Documentation>
+        <Summary>城市 </Summary>
+      </Documentation>
+      <column name="" default="''" length="25" />
+    </property>
+    <property name="CityId" type="Int64" p1:ValidateRequired="true" p1:Guid="871e6c88-0d96-4baf-85ea-a6da245f0717">
+      <Documentation>
+        <Summary>城市代码 </Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </property>
+    <property name="CreateTime" type="DateTime" p1:ValidateRequired="true" p1:Guid="9f7cbfa2-385d-4276-aa9f-9fcde92aee3d">
+      <Documentation>
+        <Summary>创建时间</Summary>
+      </Documentation>
+      <column name="" default="current_timestamp" />
+    </property>
+  </class>
+  <class name="PaySecurity" entity-set="PaySecurities" table="Pay_Security" p1:Guid="75cbd7d3-0255-43c2-a52f-fc0aec40298e">
+    <Documentation>
+      <Summary>支付安全信息</Summary>
+    </Documentation>
+    <id name="UserId" type="Int64" p1:ValidateRequired="true" p1:Guid="d01aec7d-cffb-4325-8478-ebdb89280874">
+      <Documentation>
+        <Summary>用户编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </id>
+    <property name="PayPassWord" type="String" p1:ValidateMaxLength="85" p1:ValidateRequired="true" p1:Guid="da994cde-2618-4a5a-80f3-ef5327667990">
+      <Documentation>
+        <Summary>支付密码 </Summary>
+      </Documentation>
+      <column name="" default="''" length="85" />
+    </property>
+    <property name="CreateBy" type="Int64" p1:ValidateRequired="true" p1:Guid="aad1f340-23d7-4e71-9d85-0040ee552604">
+      <Documentation>
+        <Summary>创建人员 </Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </property>
+    <property name="CreateTime" type="DateTime" p1:ValidateRequired="true" p1:Guid="f3c95de7-5ee0-44bb-b299-5a0e7495cdb9">
+      <Documentation>
+        <Summary>创建时间</Summary>
+      </Documentation>
+      <column name="" default="current_timestamp" />
+    </property>
+    <property name="UpdateBy" type="Int64" p1:ValidateRequired="true" p1:Guid="0767ef1b-aec4-4c6a-9c34-0e8561651fa1">
+      <Documentation>
+        <Summary>更新人员</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </property>
+    <property name="UpdateTime" type="DateTime" p1:ValidateRequired="true" p1:Guid="d4224cb2-4f5f-4364-a93a-16aee5c98bb7">
+      <Documentation>
+        <Summary>更新时间</Summary>
+      </Documentation>
+      <column name="" default="current_timeStamp" />
+    </property>
+  </class>
+  <class name="UserandAllies" entity-set="UserandAllies" table="User_and_Allies" p1:Guid="9f514659-9430-4677-8f51-2385cb9f3af4">
+    <Documentation>
+      <Summary>用户与友商关系</Summary>
+    </Documentation>
+    <id name="Id" type="Int64" p1:ValidateRequired="true" p1:Guid="4e3ff9b4-98a6-4a7b-b2ab-beb2933d29ee">
+      <Documentation>
+        <Summary>编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </id>
+    <property name="UserId" type="Int64" p1:ValidateRequired="true" p1:Guid="4a56ca7a-9d3d-4a68-99e8-5aaa8eb9b175">
+      <Documentation>
+        <Summary>用户编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </property>
+    <property name="AlliesId" type="Int64" p1:ValidateRequired="true" p1:Guid="a1612666-da01-4e9a-a5d6-aea7cd90540a">
+      <Documentation>
+        <Summary>友商编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </property>
+    <property name="IsActive" type="Boolean" p1:ValidateRequired="true" p1:Guid="60ee1a2e-a60a-4b64-b98d-aa1d6a180d72">
+      <Documentation>
+        <Summary>是否启用</Summary>
+      </Documentation>
+      <column name="" default="1" />
+    </property>
+    <property name="CreateTime" type="DateTime" p1:ValidateRequired="true" p1:Guid="15193277-d73c-4dbb-8dab-43698af79c60">
+      <Documentation>
+        <Summary>创建时间</Summary>
+      </Documentation>
+      <column name="" default="current_timeStamp" />
+    </property>
+  </class>
+  <class name="UserandUser" entity-set="UserandUsers" table="User_and_User" p1:Guid="33d362db-c5e5-4a86-a0c0-75c2845c8059">
+    <Documentation>
+      <Summary>用户与用户关系</Summary>
+    </Documentation>
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="485c53e5-f3b4-40a0-8a7d-56743a413f12">
+      <Documentation>
+        <Summary>编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </id>
+    <property name="UserId" type="Int64" p1:ValidateRequired="true" p1:Guid="54b9f7f4-7175-4e84-a1cd-e7dcc46b57cb">
+      <Documentation>
+        <Summary>用户编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </property>
+    <property name="InvitedUser" type="Int64" p1:ValidateRequired="true" p1:Guid="ccee8c56-bb91-4ae1-853c-f640ce9cbd84">
+      <Documentation>
+        <Summary>邀请用户编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </property>
+    <property name="Remark" type="String" p1:ValidateMaxLength="50" p1:ValidateRequired="true" p1:Guid="cdba4a1d-5305-41f1-8d87-89b5496e933b">
+      <Documentation>
+        <Summary>备注</Summary>
+      </Documentation>
+      <column name="" default="''" length="50" />
+    </property>
+    <property name="CreateTime" type="DateTime" p1:ValidateRequired="true" p1:Guid="ea9c92ef-dd31-4de4-8846-1b1508b21659">
+      <Documentation>
+        <Summary>创建时间</Summary>
+      </Documentation>
+      <column name="" default="current_timeStamp" />
+    </property>
+  </class>
+  <class name="ThirdPartyLogin" entity-set="ThirdPartyLogins" table="Third_Party_Login" p1:Guid="c3ab7c53-00e0-494a-a2df-9026edf24197">
+    <Documentation>
+      <Summary>第三方登陆</Summary>
+    </Documentation>
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="d125e3b3-dc60-4f61-a7a4-f46c15ae5bdc">
+      <Documentation>
+        <Summary>编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </id>
+    <property name="Type" type="Cowboy.TravelShop.Model.LoginType" p1:ValidateRequired="true" p1:Guid="069a213e-25ba-4140-8be2-97c2ddc68829">
+      <Documentation>
+        <Summary>类型</Summary>
+      </Documentation>
+      <column name="" />
+    </property>
+    <property name="OpenId" type="String" p1:ValidateMaxLength="45" p1:ValidateRequired="true" p1:Guid="f88c0a09-9b99-4b66-a52a-dc778bde7efb">
+      <column name="" default="''" length="45" />
+    </property>
+    <property name="Sex" type="Boolean" p1:ValidateRequired="true" p1:Guid="1a38c5bb-ab15-4e53-80f6-0c6c781d1955">
+      <Documentation>
+        <Summary>性别 </Summary>
+      </Documentation>
+      <column name="" default="1" />
+    </property>
+    <property name="Age" type="Byte" p1:ValidateRequired="true" p1:Guid="02665cab-25fb-441e-bb68-12f058c16501">
+      <Documentation>
+        <Summary>年龄</Summary>
+      </Documentation>
+      <column name="" default="18" />
+    </property>
+    <property name="Adress" type="String" p1:ValidateMaxLength="75" p1:ValidateRequired="true" p1:Guid="c61b1cca-1cd9-48e0-9187-96c8eadd6bb3">
+      <Documentation>
+        <Summary>地址</Summary>
+      </Documentation>
+      <column name="" default="''" length="75" />
+    </property>
+    <property name="CreateTime" type="DateTime" p1:ValidateRequired="true" p1:Guid="7487817b-ab01-4074-8163-bc0da6de5826">
+      <Documentation>
+        <Summary>创建时间</Summary>
+      </Documentation>
+      <column name="" default="current_timestamp" />
+    </property>
+  </class>
+  <class name="Stroke" entity-set="Strokes" table="Stroke" p1:Guid="9bbf73a8-9a22-40cd-ba13-f48c8e06f165">
+    <Documentation>
+      <Summary>行程</Summary>
+    </Documentation>
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="f986b6ec-1046-4f6f-802e-481fe130b17f">
+      <Documentation>
+        <Summary>编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </id>
+    <property name="Title" type="String" p1:ValidateMaxLength="15" p1:ValidateRequired="true" p1:Guid="ae3ef38d-0c61-4fa5-8574-2e39e31d9cf6">
+      <Documentation>
+        <Summary>名称 </Summary>
+      </Documentation>
+      <column name="" default="''" length="15" />
+    </property>
+    <property name="Detail" type="String" p1:ValidateMaxLength="2500" p1:ValidateRequired="true" p1:Guid="64ccc477-9e25-4f83-aeb9-5befe5520d5a">
+      <Documentation>
+        <Summary>详情</Summary>
+      </Documentation>
+      <column name="" length="2500" />
+    </property>
+    <property name="SearchKey" type="String" p1:ValidateMaxLength="50" p1:ValidateRequired="true" p1:Guid="2bca81a9-aa62-4cb0-a606-21d5c0af4f37">
+      <Documentation>
+        <Summary>搜索关键字</Summary>
+      </Documentation>
+      <column name="" default="''" length="50" />
+    </property>
+    <property name="CategoryId" type="Int64" p1:ValidateRequired="true" p1:Guid="27947fd4-6ce2-4971-8985-446502ab50be">
+      <Documentation>
+        <Summary>种类编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </property>
+    <property name="ImageUrl" type="String" p1:ValidateMaxLength="80" p1:ValidateRequired="true" p1:Guid="883eed94-1639-4994-ac6a-66d6088d7d87">
+      <Documentation>
+        <Summary>封面图片地址</Summary>
+      </Documentation>
+      <column name="" default="''" length="80" />
+    </property>
+    <property name="ImageThumb" type="String" p1:ValidateMaxLength="80" p1:ValidateRequired="true" p1:Guid="35c06727-6bfd-46b7-abcf-75f48712c3e9">
+      <Documentation>
+        <Summary>封面图片缩略图</Summary>
+      </Documentation>
+      <column name="" default="''" length="80" />
+    </property>
+    <property name="NumberDay" type="SByte" p1:ValidateRequired="true" p1:Guid="3bcced11-d2eb-4370-afc0-db9241bebb78">
+      <Documentation>
+        <Summary>游玩天数</Summary>
+      </Documentation>
+      <column name="" default="3" />
+    </property>
+    <property name="IsActive" type="Boolean" p1:ValidateRequired="true" p1:Guid="926a0095-5ff3-4156-a5cc-e952b0b03f88">
+      <column name="" default="1" />
+    </property>
+    <property name="IsRecommend" type="Boolean" p1:ValidateRequired="true" p1:Guid="8ae9a84f-6e06-4351-a5a6-b4bf433de128">
+      <Documentation>
+        <Summary>是否为推荐</Summary>
+      </Documentation>
+      <column name="" default="0" />
+    </property>
+    <property name="IsHot" type="Boolean" p1:ValidateRequired="true" p1:Guid="b15182f5-530f-4026-b660-294896b40f19">
+      <Documentation>
+        <Summary>是否热门</Summary>
+      </Documentation>
+      <column name="" default="0" />
+    </property>
+    <property name="IsNew" type="Boolean" p1:ValidateRequired="true" p1:Guid="4fca0370-b39d-41e2-89fd-fa7fb132309d">
+      <Documentation>
+        <Summary>是否新品</Summary>
+      </Documentation>
+      <column name="" default="0" />
+    </property>
+    <property name="City" type="String" p1:ValidateMaxLength="40" p1:ValidateRequired="true" p1:Guid="4ca8b117-4a0d-4820-9043-bdb9fed06042">
+      <Documentation>
+        <Summary>出发城市</Summary>
+      </Documentation>
+      <column name="" default="''" length="40" />
+    </property>
+    <property name="Price" type="Decimal" p1:ValidateRequired="true" p1:Guid="6b9c92a0-46fe-491a-865c-5f7136629cb2">
+      <Documentation>
+        <Summary>标准价格</Summary>
+      </Documentation>
+      <column name="" default="0" precision="18" scale="2" />
+    </property>
+    <property name="Destination" type="String" p1:ValidateMaxLength="45" p1:ValidateRequired="true" p1:Guid="13e915d4-7664-4953-8bd2-df96e08840b9">
+      <Documentation>
+        <Summary>目的地</Summary>
+      </Documentation>
+      <column name="" default="''" length="45" />
+    </property>
+    <property name="SpecialPrice" type="Decimal" p1:ValidateRequired="true" p1:Guid="2ef22d97-aba8-473f-9628-67df226acc66">
+      <Documentation>
+        <Summary>优惠价格</Summary>
+      </Documentation>
+      <column name="" default="0" precision="18" scale="2" />
+    </property>
+    <property name="CreateTime" type="DateTime" p1:ValidateRequired="true" p1:Guid="d7882285-1c4a-4736-a7c4-7cd0b2765883">
+      <Documentation>
+        <Summary>创建时间</Summary>
+      </Documentation>
+      <column name="" default="current_timeStamp" />
+    </property>
+  </class>
+  <class name="StrokeCategory" entity-set="StrokeCategories" table="Stroke_Category" p1:Guid="16206320-3c71-44de-8bf1-2ebd65542b24">
+    <Documentation>
+      <Summary>行程种类</Summary>
+    </Documentation>
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="d3aca74e-cd0b-4c65-a88f-4c8eab10847c">
+      <Documentation>
+        <Summary>编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </id>
+    <property name="CategoryName" type="String" p1:ValidateMaxLength="45" p1:ValidateRequired="true" p1:Guid="3e8d90ab-f482-4e4f-aecd-d620ab331f48">
+      <Documentation>
+        <Summary>种类名称</Summary>
+      </Documentation>
+      <column name="" default="''" length="45" />
+    </property>
+    <property name="IsActive" type="Boolean" p1:ValidateRequired="true" p1:Guid="551ac84f-d704-486d-b399-764fc010fcfe">
+      <Documentation>
+        <Summary>是否启用</Summary>
+      </Documentation>
+      <column name="" default="1" />
+    </property>
+    <property name="CreateTime" type="DateTime" p1:ValidateRequired="true" p1:Guid="a950c9c6-12c0-4ed1-9e2d-ed98e022acec">
+      <Documentation>
+        <Summary>创建时间 </Summary>
+      </Documentation>
+      <column name="" default="current_TimeStamp" />
+    </property>
+  </class>
+  <class name="StrokeCollect" entity-set="StrokeCollects" table="Stroke_Collect" p1:Guid="31efd958-e407-4d4b-868c-e814c62c1e5b">
+    <Documentation>
+      <Summary>行程收藏</Summary>
+    </Documentation>
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="6205b328-117d-46c3-9e25-8fc73c00306a">
+      <Documentation>
+        <Summary>编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </id>
+    <property name="UserId" type="Int64" p1:ValidateRequired="true" p1:Guid="6b2c93a5-2680-4f2e-b86b-25ffd61427f9">
+      <Documentation>
+        <Summary>用户编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </property>
+    <property name="IsActive" type="Boolean" p1:ValidateRequired="true" p1:Guid="0859a1fe-9582-48fe-9b53-e3d50c0bcbe6">
+      <Documentation>
+        <Summary>是否启用</Summary>
+      </Documentation>
+      <column name="" default="1" />
+    </property>
+    <property name="StrokeId" type="Int64" p1:ValidateRequired="true" p1:Guid="a5fabf0d-533d-44c6-a2b2-deff614e15a0">
+      <Documentation>
+        <Summary>路程编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </property>
+    <property name="CreateTime" type="DateTime" p1:ValidateRequired="true" p1:Guid="83488c02-55bb-43b7-8317-d5b4352f1915">
+      <Documentation>
+        <Summary>创建时间</Summary>
+      </Documentation>
+      <column name="" default="current_timeStamp" />
+    </property>
+  </class>
+  <class name="StrokeShare" entity-set="StrokeShares" table="Stroke_Share" p1:Guid="e57476f1-bba2-49d1-9908-d7de6bd82895">
+    <Documentation>
+      <Summary>路程分享 </Summary>
+    </Documentation>
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="927798ac-4e3a-4477-b234-f98dc91ccf68">
+      <Documentation>
+        <Summary>编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </id>
+    <property name="UserId" type="Int64" p1:ValidateRequired="true" p1:Guid="c2744002-4824-4410-865e-de3e1c68a686">
+      <Documentation>
+        <Summary>用户编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </property>
+    <property name="StrokeId" type="Int64" p1:ValidateRequired="true" p1:Guid="1e160005-6919-4625-b8a3-240626957c74">
+      <Documentation>
+        <Summary>行程编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </property>
+    <property name="ShareNumber" type="Int16" p1:ValidateRequired="true" p1:Guid="effe04cc-a087-49ad-ae2c-de507d16a986">
+      <Documentation>
+        <Summary>分享数量</Summary>
+      </Documentation>
+      <column name="" default="0" />
+    </property>
+    <property name="CreateTime" type="DateTime" p1:ValidateRequired="true" p1:Guid="3eb89eab-8910-4233-8508-f77265509fd1">
+      <Documentation>
+        <Summary>创建时间</Summary>
+      </Documentation>
+      <column name="" default="current_timeStamp" />
+    </property>
+    <property name="UpdateTime" type="DateTime" p1:ValidateRequired="true" p1:Guid="d052511d-4c96-4405-bdf2-0874f5c5ff05">
+      <Documentation>
+        <Summary>更新时间</Summary>
+      </Documentation>
+      <column name="" default="current_timeStamp" />
+    </property>
+  </class>
+  <class name="Order" entity-set="Orders" table="Order" p1:Guid="2bdb4fb0-200c-440e-939c-8d2799f88f6a">
+    <Documentation>
+      <Summary>订单</Summary>
+    </Documentation>
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="c33f47f0-dfb3-47c7-9e8e-73b6ce33f38a">
+      <Documentation>
+        <Summary>编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </id>
+    <property name="OrderNo" type="String" p1:ValidateMaxLength="45" p1:ValidateRequired="true" p1:Guid="2e10c9dc-aeb8-4f93-bb3c-c422d78a40a3">
+      <Documentation>
+        <Summary>订单单号</Summary>
+      </Documentation>
+      <column name="" default="''" length="45" />
+    </property>
+    <property name="UserId" type="Int64" p1:ValidateRequired="true" p1:Guid="632a0a13-d06d-438e-b8c8-ddf6438cc7b5">
+      <Documentation>
+        <Summary>用户编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </property>
+    <property name="StrokeId" type="Int64" p1:ValidateRequired="true" p1:Guid="6c396706-4b2b-45f7-b9ad-882b65e70d10">
+      <Documentation>
+        <Summary>行程编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </property>
+    <property name="City" type="String" p1:ValidateMaxLength="65" p1:ValidateRequired="true" p1:Guid="5d45f94a-b8fe-49d0-82d3-f5ec1c9c682f">
+      <Documentation>
+        <Summary>出发城市</Summary>
+      </Documentation>
+      <column name="" default="&quot;&quot;" length="65" />
+    </property>
+    <property name="Title" type="String" p1:ValidateMaxLength="65" p1:ValidateRequired="true" p1:Guid="2a5d5ec1-f98b-40a9-9380-c7df971a0d55">
+      <Documentation>
+        <Summary> 行程标题</Summary>
+      </Documentation>
+      <column name="" default="''" length="65" />
+    </property>
+    <property name="ImageUrl" type="String" p1:ValidateMaxLength="85" p1:ValidateRequired="true" p1:Guid="a90d6706-b854-4268-be3c-ef808b729aa7">
+      <Documentation>
+        <Summary>行程封面</Summary>
+      </Documentation>
+      <column name="" default="&quot;&quot;" length="85" />
+    </property>
+    <property name="Destination" type="String" p1:ValidateMaxLength="65" p1:ValidateRequired="true" p1:Guid="c2232b24-81b2-41ee-943f-c095dd1cdc7d">
+      <Documentation>
+        <Summary>目的地</Summary>
+      </Documentation>
+      <column name="" default="&quot;&quot;" length="65" />
+    </property>
+    <property name="NumberDay" type="SByte" p1:ValidateRequired="true" p1:Guid="9dc74d04-d43b-4362-b590-bcc3ff28cfd4">
+      <Documentation>
+        <Summary>游玩天数</Summary>
+      </Documentation>
+      <column name="" default="3" />
+    </property>
+    <property name="OrderStatus" type="Cowboy.TravelShop.Model.OrderStatus" p1:ValidateRequired="true" p1:Guid="2953a84a-1dbd-467e-adfb-bf8190582f15">
+      <Documentation>
+        <Summary>订单状态</Summary>
+      </Documentation>
+      <column name="" default="0" />
+    </property>
+    <property name="Price" type="Decimal" p1:ValidateRequired="true" p1:Guid="76a80f4d-723c-40b7-be47-65c5680304e5">
+      <Documentation>
+        <Summary>单价</Summary>
+      </Documentation>
+      <column name="" default="0" precision="18" scale="2" />
+    </property>
+    <property name="TotalCount" type="Int16" p1:ValidateRequired="true" p1:Guid="27da7ad7-2abe-4a4b-a5b3-b40c9b7457b6">
+      <Documentation>
+        <Summary>订单数量</Summary>
+      </Documentation>
+      <column name="" />
+    </property>
+    <property name="TotalAmount" type="Decimal" p1:ValidateRequired="true" p1:Guid="ac57199f-66d7-4ee5-ab12-2d526e8b5bea">
+      <Documentation>
+        <Summary>订单总金额</Summary>
+      </Documentation>
+      <column name="" default="0" precision="18" scale="2" />
+    </property>
+    <property name="Payment" type="Cowboy.TravelShop.Model.PaymentType" p1:ValidateRequired="true" p1:Guid="c75082ce-d655-4f52-9641-fa5c0779b42f">
+      <Documentation>
+        <Summary>支付方式</Summary>
+      </Documentation>
+      <column name="" />
+    </property>
+    <property name="ShareUser" type="Int64" p1:ValidateRequired="true" p1:Guid="2d6eba33-cbcc-44f2-9d3f-aadfdd3ddc13">
+      <Documentation>
+        <Summary>分享用户源</Summary>
+      </Documentation>
+      <column name="" default="0" precision="18" scale="0" />
+    </property>
+    <property name="From" type="Cowboy.TravelShop.Model.UserFrom" p1:ValidateRequired="true" p1:Guid="f75514af-eb25-4bfb-b03f-83253ea4ed3d">
+      <Documentation>
+        <Summary>分享来源</Summary>
+      </Documentation>
+      <column name="" default="0" />
+    </property>
+    <property name="Remark" type="String" p1:ValidateMaxLength="45" p1:ValidateRequired="true" p1:Guid="618da7f5-2bce-4d79-ae48-13fcfcb813fe">
+      <Documentation>
+        <Summary>备注</Summary>
+      </Documentation>
+      <column name="" default="''" length="45" />
+    </property>
+    <property name="CreateTime" type="DateTime" p1:ValidateRequired="true" p1:Guid="a6268f7e-9496-4e7c-b04e-87297fb21970">
+      <Documentation>
+        <Summary>创建时间</Summary>
+      </Documentation>
+      <column name="" default="current_timeStamp" />
+    </property>
+    <property name="UpdateTime" type="DateTime" p1:ValidateRequired="true" p1:Guid="1192e7cd-4e25-4fd3-8eb3-deb5818b4556">
+      <Documentation>
+        <Summary>更新时间</Summary>
+      </Documentation>
+      <column name="" default="current_timeStamp" />
+    </property>
+  </class>
+  <class name="ShoppingCart" entity-set="ShoppingCarts" table="Shopping_Cart" p1:Guid="6f382eb6-8db5-4b32-a471-cd288c305cb1">
+    <Documentation>
+      <Summary>购物车</Summary>
+    </Documentation>
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="55962175-7fd8-4fb7-bf98-e46244a34ee9">
+      <Documentation>
+        <Summary>编号 </Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </id>
+    <property name="UserId" type="Int64" p1:ValidateRequired="true" p1:Guid="d7be03d0-ba61-45c7-8818-d9fd20e15720">
+      <Documentation>
+        <Summary>用户编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </property>
+    <property name="StrokeId" type="Int64" p1:ValidateRequired="true" p1:Guid="60834aeb-96e2-4e97-b924-2227d47fd88e">
+      <Documentation>
+        <Summary>行程编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </property>
+    <property name="Quantity" type="Int16" p1:ValidateRequired="true" p1:Guid="7a0ed716-735a-483c-81b5-bf796b1cd362">
+      <Documentation>
+        <Summary>数量</Summary>
+      </Documentation>
+      <column name="" />
+    </property>
+    <property name="Remark" type="String" p1:ValidateMaxLength="45" p1:ValidateRequired="true" p1:Guid="61c643be-9223-4446-8b10-9bd402704c43">
+      <Documentation>
+        <Summary>备注</Summary>
+      </Documentation>
+      <column name="" default="''" length="45" />
+    </property>
+    <property name="CreateBy" type="Int64" p1:ValidateRequired="true" p1:Guid="ccbc9683-fa9f-4d86-9b9f-316920d5df2f">
+      <Documentation>
+        <Summary>创建人员</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </property>
+    <property name="CreateTime" type="DateTime" p1:ValidateRequired="true" p1:Guid="12dc566a-2a3d-4e56-a14d-a59a9ac9d845">
+      <Documentation>
+        <Summary>创建时间</Summary>
+      </Documentation>
+      <column name="" default="current_timeStamp" />
+    </property>
+  </class>
+  <class name="City" entity-set="Cities" table="City" p1:Guid="2744bc1d-999e-47d2-acbe-bf2e013c989b">
+    <Documentation>
+      <Summary>城市</Summary>
+    </Documentation>
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="9d83d9e6-5063-4945-aac7-b6373df43b16">
+      <Documentation>
+        <Summary>编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </id>
+    <property name="IsOpen" type="Boolean" p1:ValidateRequired="true" p1:Guid="ddc80bbb-4595-4e24-aea7-0614965e067f">
+      <Documentation>
+        <Summary>是否开放</Summary>
+      </Documentation>
+      <column name="" default="0" />
+    </property>
+    <property name="IsHot" type="Boolean" p1:ValidateRequired="true" p1:Guid="d3e12398-9b39-4e36-80c4-37cb1e6cd6c3">
+      <Documentation>
+        <Summary>是否热门</Summary>
+      </Documentation>
+      <column name="" default="0" />
+    </property>
+    <property name="Name" type="String" p1:ValidateMaxLength="30" p1:ValidateRequired="true" p1:Guid="7c829607-16d7-4ddf-9b86-57138c03b09a">
+      <Documentation>
+        <Summary>名称</Summary>
+      </Documentation>
+      <column name="" default="''" length="30" />
+    </property>
+    <property name="ParentId" type="Int64" p1:ValidateRequired="true" p1:Guid="3ec668ff-6d77-456d-b5a1-6605b9fff5aa">
+      <Documentation>
+        <Summary>父级编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </property>
+    <property name="SimpleSpell" type="String" p1:ValidateMaxLength="25" p1:ValidateRequired="true" p1:Guid="13ff0445-75a0-49ae-9d95-98705b40662c">
+      <Documentation>
+        <Summary>拼音简写</Summary>
+      </Documentation>
+      <column name="" default="''" length="25" />
+    </property>
+    <property name="FullSpell" type="String" p1:ValidateMaxLength="30" p1:ValidateRequired="true" p1:Guid="6ccf0bda-4f9b-4ae8-b840-f2b1da81693e">
+      <Documentation>
+        <Summary>拼音全写</Summary>
+      </Documentation>
+      <column name="" default="''" length="30" />
+    </property>
+    <property name="CreateBy" type="Int64" p1:ValidateRequired="true" p1:Guid="db15fc16-8990-453f-95a2-07a2d5279816">
+      <Documentation>
+        <Summary>创建人员</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </property>
+    <property name="CreateTime" type="DateTime" p1:ValidateRequired="true" p1:Guid="3b3ec694-798c-4f7e-bffc-27e52eed9c55">
+      <Documentation>
+        <Summary>创建时间</Summary>
+      </Documentation>
+      <column name="" default="current_timeStamp" />
+    </property>
+  </class>
+  <class name="Payment" entity-set="Payments" table="Payment" p1:Guid="74481ba3-0850-4bb2-832a-f29400a3404d">
+    <Documentation>
+      <Summary>支付信息</Summary>
+    </Documentation>
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="dd51d93c-485c-4212-bcff-a9661af5c3e4">
+      <Documentation>
+        <Summary>编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </id>
+    <property name="OrderIds" type="String" p1:ValidateMaxLength="50" p1:ValidateRequired="true" p1:Guid="045e4a76-c47b-495e-a689-5344ef8ba90d">
+      <Documentation>
+        <Summary>订单编号</Summary>
+      </Documentation>
+      <column name="" default="''" length="50" />
+    </property>
+    <property name="PayEnvironment" type="Byte" p1:ValidateRequired="true" p1:Guid="12b3086c-adc0-4027-86de-557bbc92b3a7">
+      <Documentation>
+        <Summary>支付环境</Summary>
+      </Documentation>
+      <column name="" default="1" />
+    </property>
+    <property name="PaymentType" type="Cowboy.TravelShop.Model.PaymentType" p1:ValidateRequired="true" p1:Guid="d2babce3-0801-483d-ae53-f854c1a7a1ff">
+      <Documentation>
+        <Summary>支付方式</Summary>
+      </Documentation>
+      <column name="" />
+    </property>
+    <property name="Status" type="Boolean" p1:ValidateRequired="true" p1:Guid="758b2f02-7eb5-4bc5-8731-edb9420c465f">
+      <Documentation>
+        <Summary>支付状态</Summary>
+      </Documentation>
+      <column name="" default="0" />
+    </property>
+    <property name="CreateBy" type="Int64" p1:ValidateRequired="true" p1:Guid="3900c83b-7db9-41fb-a77d-ddfb4c9d2a06">
+      <Documentation>
+        <Summary>创建人员</Summary>
+      </Documentation>
+      <column name="" default="0" precision="18" scale="0" />
+    </property>
+    <property name="CreateTime" type="DateTime" p1:ValidateRequired="true" p1:Guid="99779c31-6e22-4470-a62b-55818385e411">
+      <Documentation>
+        <Summary>创建时间</Summary>
+      </Documentation>
+      <column name="" default="current_timeStamp" />
+    </property>
+    <property name="UpdateBy" type="Int64" p1:ValidateRequired="true" p1:Guid="43dc04d0-f9f4-47ab-834e-24f3cf861e39">
+      <Documentation>
+        <Summary>更新人员</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </property>
+    <property name="UpdateTime" type="DateTime" p1:ValidateRequired="true" p1:Guid="63c5ef2e-414a-46e1-8abd-2a3931baed93">
+      <Documentation>
+        <Summary>更新时间</Summary>
+      </Documentation>
+      <column name="" default="current_timeStamp" />
+    </property>
+  </class>
+  <class name="PaymentCallback" entity-set="PaymentCallbacks" table="Payment_callback" p1:Guid="1e60ac2c-49ae-4be4-8bcb-5d02e76439ce">
+    <Documentation>
+      <Summary>支付回调信息</Summary>
+    </Documentation>
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="9f39edb2-1800-49f9-9dcc-187830e03fd5">
+      <Documentation>
+        <Summary> 编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </id>
+    <property name="PaymentId" type="Int64" p1:ValidateRequired="true" p1:Guid="31ea52d7-82e7-4ed4-ba51-1e3ecbd9c484">
+      <Documentation>
+        <Summary>支付编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </property>
+    <property name="OutTradeStatus" type="Boolean" p1:ValidateRequired="true" p1:Guid="b35ebce0-4dea-4de9-a47f-a0ee01b47a10">
+      <Documentation>
+        <Summary>支付状态</Summary>
+      </Documentation>
+      <column name="" default="1" />
+    </property>
+    <property name="TradeNo" type="String" p1:ValidateMaxLength="15" p1:ValidateRequired="true" p1:Guid="e25f5067-ba5e-4782-b697-991ea3dae6df">
+      <Documentation>
+        <Summary>第三方交易凭证号</Summary>
+      </Documentation>
+      <column name="" default="''" length="80" />
+    </property>
+    <property name="OutTradeParameter" type="String" p1:ValidateMaxLength="85" p1:ValidateRequired="true" p1:Guid="8b222163-50c2-46a0-9817-4c571414b8d8">
+      <Documentation>
+        <Summary>支付回调详细信息</Summary>
+      </Documentation>
+      <column name="" default="''" length="85" />
+    </property>
+    <property name="CreateTime" type="DateTime" p1:ValidateRequired="true" p1:Guid="65468399-089f-4e0b-b988-e248178715fc">
+      <Documentation>
+        <Summary>创建时间</Summary>
+      </Documentation>
+      <column name="" default="current_timeStamp" />
+    </property>
+  </class>
+  <class name="Ad" entity-set="Ad" table="Ad" p1:Guid="8d214b94-1123-493e-a378-9b27bfa47896">
+    <Documentation>
+      <Summary>广告</Summary>
+    </Documentation>
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="3db2c68f-0626-44c0-a77f-3560c78bac8c">
+      <Documentation>
+        <Summary>编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </id>
+    <property name="Title" type="String" p1:ValidateMaxLength="25" p1:ValidateRequired="true" p1:Guid="1cd1e0ce-2cec-429e-adbb-0a530e315e36">
+      <Documentation>
+        <Summary>标题</Summary>
+      </Documentation>
+      <column name="" default="''" length="25" />
+    </property>
+    <property name="Type" type="Cowboy.TravelShop.Model.ADType" p1:ValidateRequired="true" p1:Guid="7dd69ab9-6138-464a-8315-be98b3675ad7">
+      <Documentation>
+        <Summary>类型</Summary>
+      </Documentation>
+      <column name="" default="1" />
+    </property>
+    <property name="StrokeId" type="Int64" p1:ValidateRequired="true" p1:Guid="4ef4e186-a47b-454e-9bd2-9e5d8b2f0448">
+      <Documentation>
+        <Summary>行程编号</Summary>
+      </Documentation>
+      <column name="" default="0" precision="18" scale="0" />
+    </property>
+    <property name="IsActive" type="Boolean" p1:ValidateRequired="true" p1:Guid="6550b71d-c3a1-4ead-93bb-e16f9055bff4">
+      <Documentation>
+        <Summary>启用状态</Summary>
+      </Documentation>
+      <column name="" />
+    </property>
+    <property name="Link" type="String" p1:ValidateMaxLength="80" p1:ValidateRequired="true" p1:Guid="00c5fe0c-b6dc-48c8-b4b5-0bae852b2253">
+      <Documentation>
+        <Summary>链接</Summary>
+      </Documentation>
+      <column name="" default="''" length="80" />
+    </property>
+    <property name="CityId" type="Int64" p1:ValidateRequired="true" p1:Guid="20b5da91-522e-4a4d-95d8-06619849cdb6">
+      <Documentation>
+        <Summary>城市编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </property>
+    <property name="Content" type="String" p1:ValidateMaxLength="35" p1:ValidateRequired="true" p1:Guid="fcb3d11e-1402-42b8-b76b-6833ebe8ccfc">
+      <Documentation>
+        <Summary>内容</Summary>
+      </Documentation>
+      <column name="" default="''" length="35" />
+    </property>
+    <property name="ImageUrl" type="String" p1:ValidateMaxLength="35" p1:ValidateRequired="true" p1:Guid="0171c813-7d7a-4fa6-a6fa-17631c6dc585">
+      <Documentation>
+        <Summary>图片地址</Summary>
+      </Documentation>
+      <column name="" default="''" length="35" />
+    </property>
+    <property name="ImageThumb" type="String" p1:ValidateMaxLength="35" p1:ValidateRequired="true" p1:Guid="604c1bcc-a6cb-48db-ac43-e0d1888be667">
+      <Documentation>
+        <Summary>缩略图</Summary>
+      </Documentation>
+      <column name="" default="''" length="35" />
+    </property>
+    <property name="CreateTime" type="DateTime" p1:ValidateRequired="true" p1:Guid="8e11c678-57c3-42b2-8653-a24e21780e5c">
+      <Documentation>
+        <Summary>创建时间</Summary>
+      </Documentation>
+      <column name="" default="current_timeStamp" />
+    </property>
+  </class>
+  <class name="SmsSend" entity-set="SmsSends" table="Sms_Send" p1:Guid="ab0e6f84-3f62-489f-ad1f-9bdb4fef626c">
+    <Documentation>
+      <Summary>验证码短信</Summary>
+    </Documentation>
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="9a9f9153-24eb-4324-9f88-8aabebe6bb9d">
+      <Documentation>
+        <Summary>编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </id>
+    <property name="Title" type="String" p1:ValidateMaxLength="25" p1:ValidateRequired="true" p1:Guid="a0b98b88-e69c-462b-bbfc-5d3278daaf9b">
+      <Documentation>
+        <Summary>标题</Summary>
+      </Documentation>
+      <column name="" default="''" length="25" />
+    </property>
+    <property name="Cphone" type="String" p1:ValidateMaxLength="25" p1:ValidateRequired="true" p1:Guid="9f23e79a-1020-40ea-aa9f-5188cf9aa1a6">
+      <Documentation>
+        <Summary>手机号码</Summary>
+      </Documentation>
+      <column name="" default="''" length="25" />
+    </property>
+    <property name="Content" type="String" p1:ValidateMaxLength="85" p1:ValidateRequired="true" p1:Guid="836f858f-cfdb-43c3-91ca-7dfdfb39a6c4">
+      <Documentation>
+        <Summary>内容</Summary>
+      </Documentation>
+      <column name="" default="''" length="85" />
+    </property>
+    <property name="Code" type="String" p1:ValidateMaxLength="25" p1:ValidateRequired="true" p1:Guid="a67a6569-fd7c-40ec-9655-8c52ca0b7def">
+      <Documentation>
+        <Summary>验证码 </Summary>
+      </Documentation>
+      <column name="" default="''" length="25" />
+    </property>
+    <property name="IsSuccess" type="Boolean" p1:ValidateRequired="true" p1:Guid="fec63904-ba88-4b02-a739-11f839b37504">
+      <Documentation>
+        <Summary>是否发送成功</Summary>
+      </Documentation>
+      <column name="" default="1" />
+    </property>
+    <property name="CreateTime" type="DateTime" p1:ValidateRequired="true" p1:Guid="7e56833f-f836-4808-8568-151ef3c6439a">
+      <Documentation>
+        <Summary>创建时间</Summary>
+      </Documentation>
+      <column name="" default="current_timeStamp" />
+    </property>
+  </class>
+  <class name="Customize" entity-set="Customizes" table="Customize" p1:Guid="52b69887-913a-4473-8725-514eb79792b3">
+    <Documentation>
+      <Summary>定制 </Summary>
+    </Documentation>
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="02666d0d-5269-4107-a079-d02c24786915">
+      <Documentation>
+        <Summary>编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </id>
+    <property name="UserId" type="Int64" p1:ValidateRequired="true" p1:Guid="793a6433-6c07-4e77-aba9-b4b61890e0f3">
+      <Documentation>
+        <Summary>用户编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </property>
+    <property name="StartCity" type="String" p1:ValidateMaxLength="50" p1:ValidateRequired="true" p1:Guid="696588f1-4f97-4544-b657-4fb25bb00dd1">
+      <Documentation>
+        <Summary>出发城市</Summary>
+      </Documentation>
+      <column name="" default="''" length="50" />
+    </property>
+    <property name="Destination" type="String" p1:ValidateMaxLength="50" p1:ValidateRequired="true" p1:Guid="f694b256-a37d-4540-8223-1d538280537b">
+      <Documentation>
+        <Summary>目的地 </Summary>
+      </Documentation>
+      <column name="" default="''" length="50" />
+    </property>
+    <property name="CustomizeNo" type="String" p1:ValidateMaxLength="60" p1:ValidateRequired="true" p1:Guid="6c296263-42ed-48fe-b2c4-41206c6da72f">
+      <column name="" default="''" length="60" />
+    </property>
+    <property name="Cphone" type="String" p1:ValidateMaxLength="40" p1:ValidateRequired="true" p1:Guid="f5f36165-8928-4808-8e9b-a840ba373e27">
+      <Documentation>
+        <Summary>手机号码 </Summary>
+      </Documentation>
+      <column name="" default="''" length="40" />
+    </property>
+    <property name="Status" type="Cowboy.TravelShop.Model.CustomizeStatus" p1:ValidateRequired="true" p1:Guid="7d1f600c-40fa-4368-a023-cd6d512b71df">
+      <Documentation>
+        <LongDescription>定制状态</LongDescription>
+      </Documentation>
+      <column name="" />
+    </property>
+    <property name="Adult" type="Int32" p1:ValidateRequired="true" p1:Guid="1cacea14-afe3-45a1-99a0-e2eb89037bb0">
+      <Documentation>
+        <Summary>成人人数</Summary>
+      </Documentation>
+      <column name="" default="0" />
+    </property>
+    <property name="Type" type="Int32" p1:ValidateRequired="true" p1:Guid="3f4c3e88-97ad-4c7d-bb1c-40869009f96b">
+      <Documentation>
+        <Summary>定制类型</Summary>
+      </Documentation>
+      <column name="" default="1" />
+    </property>
+    <property name="Children" type="Int32" p1:ValidateRequired="true" p1:Guid="2b3bd675-e072-4b50-83f0-df31f923149a">
+      <Documentation>
+        <Summary>儿童人数</Summary>
+      </Documentation>
+      <column name="" default="0" />
+    </property>
+    <property name="TotalAmount" type="Decimal" p1:ValidateRequired="true" p1:Guid="8b1898cb-442e-4f73-a405-f0ea08de4065">
+      <Documentation>
+        <Summary>定制总价格</Summary>
+      </Documentation>
+      <column name="" default="0" precision="18" scale="2" />
+    </property>
+    <property name="Name" type="String" p1:ValidateMaxLength="30" p1:ValidateRequired="true" p1:Guid="e5d0a23c-3b8d-4b61-abcc-5b25bc2820a7">
+      <Documentation>
+        <Summary>预定人</Summary>
+      </Documentation>
+      <column name="" default="''" length="30" />
+    </property>
+    <property name="Budget" type="Decimal" p1:ValidateRequired="true" p1:Guid="c9040329-3837-40bf-a26d-8ba6fe4a581b">
+      <Documentation>
+        <Summary>人均预算</Summary>
+      </Documentation>
+      <column name="" default="0" precision="18" scale="2" />
+    </property>
+    <property name="NumberDay" type="Int32" p1:ValidateRequired="true" p1:Guid="d0184cdf-7367-4240-8b8c-999dae780255">
+      <Documentation>
+        <Summary>游玩天数</Summary>
+      </Documentation>
+      <column name="" default="3" />
+    </property>
+    <property name="StartDate" type="DateTime" p1:ValidateRequired="true" p1:Guid="ca1cfeab-f1b1-4fd3-b46f-dc119425669c">
+      <Documentation>
+        <Summary>开始日期</Summary>
+      </Documentation>
+      <column name="" default="Current_timeStamp" />
+    </property>
+    <property name="Remark" type="String" p1:ValidateMaxLength="40" p1:ValidateRequired="true" p1:Guid="5dccb082-a67e-4fad-a99e-cfab721cd16c">
+      <Documentation>
+        <Summary>备注</Summary>
+      </Documentation>
+      <column name="" default="''" length="40" />
+    </property>
+    <property name="CreateTime" type="DateTime" p1:ValidateRequired="true" p1:Guid="150d54da-2a48-4b60-8f70-7d9139e4893d">
+      <Documentation>
+        <Summary>创建时间</Summary>
+      </Documentation>
+      <column name="" default="current_timeStamp" />
+    </property>
+    <property name="UpdateTime" type="DateTime" p1:ValidateRequired="true" p1:Guid="569d3de1-3844-4568-b2f7-ab18e3487a9e">
+      <column name="" default="current_TimeStamp" />
+    </property>
+  </class>
+  <class name="VerificationCode" entity-set="VerificationCodes" table="Verificatio_nCode" p1:Guid="d95f779a-7125-4fbb-b544-b8ff04e99069">
+    <Documentation>
+      <Summary>验证码记录信息 </Summary>
+    </Documentation>
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="b21f1ec7-8073-47cc-bf5a-a4096386f754">
+      <Documentation>
+        <Summary>编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </id>
+    <property name="Title" type="String" p1:ValidateMaxLength="20" p1:ValidateRequired="true" p1:Guid="ca828267-0f58-461a-a989-fd1b04cc3f67">
+      <Documentation>
+        <Summary>标题</Summary>
+      </Documentation>
+      <column name="" default="''" length="20" />
+    </property>
+    <property name="Type" type="Byte" p1:ValidateRequired="true" p1:Guid="61061d8d-a4b6-4312-9c28-547f2db5cb88">
+      <Documentation>
+        <Summary>类型</Summary>
+      </Documentation>
+      <column name="" default="1" />
+    </property>
+    <property name="Content" type="String" p1:ValidateMaxLength="80" p1:ValidateRequired="true" p1:Guid="b8f0a163-ca12-43de-aaf2-3b5ef90592d5">
+      <Documentation>
+        <Summary>内容</Summary>
+      </Documentation>
+      <column name="" default="''" length="80" />
+    </property>
+    <property name="CreateTime" type="DateTime" p1:ValidateRequired="true" p1:Guid="2c38d39f-1b26-4a7c-85b1-e799936d7882">
+      <Documentation>
+        <Summary>创建时间</Summary>
+      </Documentation>
+      <column name="" default="current_timeStamp" />
+    </property>
+  </class>
+  <class name="GroupSending" entity-set="GroupSendings" table="Group_Sending" p1:Guid="a7d80dd9-9817-4c9f-b4c6-070f596c919e">
+    <Documentation>
+      <Summary>群发短信</Summary>
+    </Documentation>
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="fca94789-496c-4c2e-89e6-f04cf427ed94">
+      <Documentation>
+        <Summary>编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </id>
+    <property name="Title" type="String" p1:ValidateMaxLength="15" p1:ValidateRequired="true" p1:Guid="9556920c-6ce3-4012-bd1f-a4f7466ec4c0">
+      <Documentation>
+        <Summary>标题</Summary>
+      </Documentation>
+      <column name="" default="''" length="15" />
+    </property>
+    <property name="Type" type="Byte" p1:ValidateRequired="true" p1:Guid="2a3718c2-75d2-4cd5-8c27-6dbf75c6aeb3">
+      <Documentation>
+        <Summary>类型</Summary>
+      </Documentation>
+      <column name="" default="1" />
+    </property>
+    <property name="Content" type="String" p1:ValidateMaxLength="85" p1:ValidateRequired="true" p1:Guid="bef1e9de-c367-403e-bef1-f7eb86ff264f">
+      <Documentation>
+        <Summary>内容</Summary>
+      </Documentation>
+      <column name="" default="''" length="85" />
+    </property>
+    <property name="Quantity" type="Int64" p1:ValidateRequired="true" p1:Guid="a8b0c535-1264-4858-80b1-350d42e51a4d">
+      <Documentation>
+        <Summary>数量</Summary>
+      </Documentation>
+      <column name="" />
+    </property>
+    <property name="CreateTime" type="DateTime" p1:ValidateRequired="true" p1:Guid="21c877a3-e28b-4957-bd91-6b7499bce9f4">
+      <Documentation>
+        <Summary>创建时间</Summary>
+      </Documentation>
+      <column name="" default="current_timeStamp" />
+    </property>
+  </class>
+  <class name="Manager" entity-set="Managers" table="Manager" p1:Guid="9d706211-2fdd-4984-8ddd-88181645153b">
+    <Documentation>
+      <Summary>管理员</Summary>
+    </Documentation>
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="9a8210d6-8894-4ac6-b0ec-94ed843b715c">
+      <Documentation>
+        <Summary>编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </id>
+    <property name="Cphone" type="StringFixedLength" p1:ValidateMaxLength="35" p1:ValidateRequired="true" p1:Guid="000f51db-5609-4b77-89ec-9f4d773ac684">
+      <Documentation>
+        <Summary>手机号</Summary>
+      </Documentation>
+      <column name="" length="35" />
+    </property>
+    <property name="PassWord" type="String" p1:ValidateMaxLength="80" p1:ValidateRequired="true" p1:Guid="4acede85-9435-4345-94b6-fb388b30e123">
+      <Documentation>
+        <Summary>密码</Summary>
+      </Documentation>
+      <column name="" default="''" length="80" />
+    </property>
+    <property name="Name" type="String" p1:ValidateMaxLength="30" p1:ValidateRequired="true" p1:Guid="b040f815-8be6-4cb5-a44c-b2a785747a9f">
+      <Documentation>
+        <Summary>管理员名称</Summary>
+      </Documentation>
+      <column name="" default="''" length="30" />
+    </property>
+    <property name="ImageUrl" type="String" p1:ValidateMaxLength="50" p1:ValidateRequired="true" p1:Guid="90aad16c-06df-4d63-baf5-87cba0b5be60">
+      <Documentation>
+        <Summary>头像地址</Summary>
+      </Documentation>
+      <column name="" default="''" length="50" />
+    </property>
+    <property name="ImageThumb" type="String" p1:ValidateMaxLength="50" p1:ValidateRequired="true" p1:Guid="1bb99c3a-77d1-48eb-b1ce-453f0a7ac690">
+      <Documentation>
+        <Summary>头像缩略图</Summary>
+      </Documentation>
+      <column name="" default="''" length="50" />
+    </property>
+    <property name="CreateTime" type="DateTime" p1:ValidateRequired="true" p1:Guid="ab0e7f82-726f-466a-891f-cb1d4433d332">
+      <Documentation>
+        <Summary>创建时间</Summary>
+      </Documentation>
+      <column name="" default="current_timeStamp" />
+    </property>
+  </class>
+  <class name="UserShare" entity-set="UserShares" table="User_Share" p1:Guid="0102b09d-50dd-4bd3-9078-8d8e9e01f518">
+    <Documentation>
+      <Summary>用户分享</Summary>
+    </Documentation>
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="60d6651b-6618-4059-852c-a2f889b7c615">
+      <Documentation>
+        <Summary>编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </id>
+    <property name="UserId" type="Int64" p1:ValidateRequired="true" p1:Guid="52a6a473-f395-41ae-b4df-fcc350e6fc8d">
+      <Documentation>
+        <Summary>用户编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </property>
+    <property name="Type" type="Byte" p1:ValidateRequired="true" p1:Guid="0d85350e-9a32-432c-bfb1-13ead83d8750">
+      <Documentation>
+        <Summary>类型</Summary>
+      </Documentation>
+      <column name="" default="1" />
+    </property>
+    <property name="ImageUrl" type="String" p1:ValidateMaxLength="50" p1:ValidateRequired="true" p1:Guid="cc60a199-308e-45d6-a235-eda81957972b">
+      <Documentation>
+        <Summary>分享图片地址</Summary>
+      </Documentation>
+      <column name="" default="''" length="50" />
+    </property>
+    <property name="ImageThumb" type="String" p1:ValidateMaxLength="50" p1:ValidateRequired="true" p1:Guid="032deae9-aec2-4018-a631-20752bf105b1">
+      <Documentation>
+        <Summary>分享图片缩略图</Summary>
+      </Documentation>
+      <column name="" default="''" length="50" />
+    </property>
+    <property name="CreateBy" type="Int64" p1:ValidateRequired="true" p1:Guid="60734da0-370b-4282-891d-fb8633108607">
+      <Documentation>
+        <Summary>创建人员</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </property>
+    <property name="CreateTime" type="DateTime" p1:ValidateRequired="true" p1:Guid="64654e2d-10e7-4217-8001-d51f9e1cbeaf">
+      <Documentation>
+        <Summary>创建时间</Summary>
+      </Documentation>
+      <column name="" default="current_timeStamp" />
+    </property>
+  </class>
+  <class name="Integral" entity-set="Integrals" table="Integral" p1:Guid="1a82e3e9-4c72-436a-8cdc-adcb66cb5350">
+    <Documentation>
+      <Summary>用户积分</Summary>
+    </Documentation>
+    <id name="UserId" type="Int64" p1:ValidateRequired="true" p1:Guid="161f2bf2-ddd4-483c-a40c-b6a6aaef7b6d">
+      <Documentation>
+        <Summary>用户编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </id>
+    <property name="Number" type="Int64" p1:ValidateRequired="true" p1:Guid="847e94d0-c58b-4391-addd-e489011f53fd">
+      <Documentation>
+        <Summary>积分数量</Summary>
+      </Documentation>
+      <column name="" default="0" precision="18" scale="0" />
+    </property>
+    <property name="CreateTime" type="DateTime" p1:ValidateRequired="true" p1:Guid="093d317a-1aaf-42f1-ae8d-e9e46bf0afea">
+      <Documentation>
+        <Summary>创建时间</Summary>
+      </Documentation>
+      <column name="" default="current_timeStamp" />
+    </property>
+    <property name="UpdateTime" type="DateTime" p1:ValidateRequired="true" p1:Guid="493fa360-c5e7-4e9e-9467-53034809bc23">
+      <Documentation>
+        <Summary>更新时间</Summary>
+      </Documentation>
+      <column name="" default="current_timeStamp" />
+    </property>
+  </class>
+  <class name="IntegralRecord" entity-set="IntegralRecords" table="IntegralRecord" p1:Guid="a57a0523-6c8f-4ee5-b777-1d03d38562cd">
+    <Documentation>
+      <Summary>积分变化记录</Summary>
+    </Documentation>
+    <id name="Id" type="Int64" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="6f8a77ab-0b25-4c0a-91f7-9bb59d5ace10">
+      <Documentation>
+        <Summary>编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </id>
+    <property name="UserId" type="Int64" p1:ValidateRequired="true" p1:Guid="81eac7ce-aeb9-4378-a156-cd9d1693e3d1">
+      <Documentation>
+        <Summary>用户编号</Summary>
+      </Documentation>
+      <column name="" precision="18" scale="0" />
+    </property>
+    <property name="Type" type="Int32" p1:ValidateRequired="true" p1:Guid="f7016aca-6911-4fa3-88b3-523d59f0b945">
+      <Documentation>
+        <Summary>记录类型</Summary>
+      </Documentation>
+      <column name="" />
+    </property>
+    <property name="Number" type="Int64" p1:ValidateRequired="true" p1:Guid="fb453f9f-1801-45e6-9e17-aeaa16ee086e">
+      <Documentation>
+        <Summary>变化数量</Summary>
+      </Documentation>
+      <column name="" />
+    </property>
+    <property name="CreateTime" type="DateTime" p1:ValidateRequired="true" p1:Guid="101aa8fe-22a5-4460-8c3f-fe4e09de577b">
+      <Documentation>
+        <Summary>创建时间</Summary>
+      </Documentation>
+      <column name="" default="current_timeStamp" />
+    </property>
+  </class>
+  <associations>
+    <association name="Stoke_StokeShare" cardinality="OneToOne" p1:Guid="a7d92e51-4d23-45cc-9109-9f8ed4c1bf9f">
+      <end1 multiplicity="One" name="Stoke" class="StrokeShare" relation-class="Stroke" constrained="True" p1:Guid="78310868-4426-49b8-8e82-c319b296adaa">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="One" name="StokeShare" class="Stroke" relation-class="StrokeShare" constrained="False" p1:Guid="7381c277-cc1b-4f97-98f1-3383b565e6e3">
+        <property name="StrokeId" />
+      </end2>
+    </association>
+    <association name="Stoke_StokeCollect" cardinality="OneToMany" p1:Guid="98d76628-4f49-480d-b64c-1217d3885532">
+      <end1 multiplicity="One" name="Stoke" class="StrokeCollect" relation-class="Stroke" constrained="True" p1:Guid="c2763564-d245-47e5-abbb-138560f54ad3">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="StokeCollects" class="Stroke" relation-class="StrokeCollect" p1:Guid="b0f9fca8-3d68-47ec-ac86-2f9d973a2431">
+        <property name="StrokeId" />
+      </end2>
+    </association>
+    <association name="Payment_PaymentCallback" cardinality="OneToOne" p1:Guid="abf13fe3-336a-4f26-b9cf-0b580852d1d8">
+      <end1 multiplicity="One" name="Payment" class="PaymentCallback" relation-class="Payment" constrained="True" p1:Guid="275117d7-35b0-47c9-b7f4-3a2cf146ecf8">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="One" name="PaymentCallback" class="Payment" relation-class="PaymentCallback" constrained="False" p1:Guid="7eb765d0-dd61-442b-8279-930bad57963f">
+        <property name="PaymentId" />
+      </end2>
+    </association>
+    <association name="StokeCategory_Stoke" cardinality="OneToMany" p1:Guid="43ce1e95-7b61-458e-bdbf-1780424aa78c">
+      <end1 multiplicity="One" name="StokeCategory" class="Stroke" relation-class="StrokeCategory" constrained="True" p1:Guid="77b1277d-d2e8-455a-ab39-4553d552c61f">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="Stokes" class="StrokeCategory" relation-class="Stroke" p1:Guid="6072f29a-2a9b-477d-a93e-0888d520bc45">
+        <property name="CategoryId" />
+      </end2>
+    </association>
+    <association name="PaySecurity_User" cardinality="OneToOne" p1:Guid="b8b0302d-6fc9-41d0-8691-0464a22be324">
+      <end1 multiplicity="One" name="PaySecurity" class="User" relation-class="PaySecurity" constrained="True" p1:Guid="5b6705ed-dd1b-41a7-8ba2-0b7d3eec4edc">
+        <property name="UserId" />
+      </end1>
+      <end2 multiplicity="One" name="User" class="PaySecurity" relation-class="User" constrained="False" p1:Guid="3c492bea-b6eb-4b12-965f-d5092900bc57">
+        <property name="Id" />
+      </end2>
+    </association>
+    <association name="UserSource_User" cardinality="OneToOne" p1:Guid="49defa41-dde9-417a-a760-7280772f02d2">
+      <end1 multiplicity="One" name="UserSource" class="User" relation-class="UserSource" constrained="True" p1:Guid="2d9fb3c3-c120-4754-9d31-27dd4834b63f">
+        <property name="UserId" />
+      </end1>
+      <end2 multiplicity="One" name="User" class="UserSource" relation-class="User" constrained="False" p1:Guid="1346058e-4290-43e5-8bb0-24d6b7cb9759">
+        <property name="Id" />
+      </end2>
+    </association>
+    <association name="allies_UserandAllies" cardinality="OneToMany" p1:Guid="1fd10af9-dc16-431d-956a-b778b84faf51">
+      <end1 multiplicity="One" name="allies" class="UserandAllies" relation-class="allies" constrained="True" p1:Guid="6d40139f-57b3-429b-89a4-1ca6c3094831">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="UserandAllies" class="allies" relation-class="UserandAllies" p1:Guid="8f0adaae-8ad6-4557-acd2-a3dd20f1384a">
+        <property name="AlliesId" />
+      </end2>
+    </association>
+    <association name="User_ShoppingCart" cardinality="OneToMany" p1:Guid="b2922378-f5c3-449b-a9f3-d1f4a3d566c9">
+      <end1 multiplicity="One" name="User" class="ShoppingCart" relation-class="User" constrained="True" p1:Guid="516c8e60-aef6-4d47-880e-a36d170d22b6">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="ShoppingCarts" class="User" relation-class="ShoppingCart" p1:Guid="1c7793d5-ac66-4c07-af59-96bed06e17db">
+        <property name="UserId" />
+      </end2>
+    </association>
+    <association name="User_UserShare" cardinality="OneToMany" p1:Guid="82437b26-7ff4-44b1-bc0d-a1cc7b387424">
+      <end1 multiplicity="One" name="User" class="UserShare" relation-class="User" constrained="True" p1:Guid="8beee7c9-e760-4403-a0dd-0e1d8cfe8ffe">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="UserShares" class="User" relation-class="UserShare" p1:Guid="6e42c6df-bfe7-46a9-9272-66173b3b26d7">
+        <property name="UserId" />
+      </end2>
+    </association>
+    <association name="User_UserandAllies" cardinality="OneToMany" p1:Guid="74728123-537e-4f5b-96fc-9efbcebb2ee9">
+      <end1 multiplicity="One" name="User" class="UserandAllies" relation-class="User" constrained="True" p1:Guid="71d53f19-2e85-4ba8-ade6-2f7ea26181fe">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="UserandAllies" class="User" relation-class="UserandAllies" p1:Guid="fda3e740-0e46-4184-bf6d-f1f1d5b8976d">
+        <property name="UserId" />
+      </end2>
+    </association>
+    <association name="User_Order" cardinality="OneToMany" p1:Guid="e82084de-4f21-47b2-ab28-602ac1d1677a">
+      <end1 multiplicity="One" name="User" class="Order" relation-class="User" constrained="True" p1:Guid="80ce9380-3721-49cf-8d40-1e5525221698">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="Orders" class="User" relation-class="Order" p1:Guid="171221c9-6580-43d1-bebb-47d26b127695">
+        <property name="UserId" />
+      </end2>
+    </association>
+    <association name="City_User" cardinality="OneToMany" p1:Guid="f88c8fcb-b139-472d-b803-a0d39c7f9bda">
+      <end1 multiplicity="ZeroOrOne" name="City" class="User" relation-class="City" constrained="True" p1:Guid="c7970edb-1e1f-4ea3-a103-d9424f18da39">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="Users" class="City" relation-class="User" p1:Guid="74b3352c-ae39-492c-9301-cfe9c2929734">
+        <property name="CityId" />
+      </end2>
+    </association>
+  </associations>
+</efcore>
